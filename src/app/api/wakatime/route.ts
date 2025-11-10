@@ -22,8 +22,7 @@ export async function GET() {
     }
 
     const data = await res.json();
-    const text: string =
-      data?.data?.[0]?.grand_total?.text ?? "0 mins"; // example: "3 hrs 18 mins"
+    const text: string = data?.data?.[0]?.grand_total?.text ?? "0 mins"; // example: "3 hrs 18 mins"
 
     return NextResponse.json({ text });
   } catch (err) {

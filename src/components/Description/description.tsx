@@ -6,7 +6,11 @@ const Description = () => {
   return (
     <div className="px-4 flex flex-col gap-4">
       <CodedTodayBadge />
-      <div className="text-muted-foreground">I create clean, thoughtful web applications that merge design and performance, learning from every build and pushing my craft a little further each time.</div>
+      <div className="text-muted-foreground">
+        I create clean, thoughtful web applications that merge design and
+        performance, learning from every build and pushing my craft a little
+        further each time.
+      </div>
       <div className="flex gap-3">
         <ResumeButton />
         <ContactCTA />
