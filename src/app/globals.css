@@ -208,7 +208,7 @@ html::-webkit-scrollbar {
   width: 80vw;
   border-radius: 50%;
   filter: blur(6vw);
-  position: absolute;
+  position: fixed;
   top: -320px;
   right: 3vw;
   /* background-color: rgba(84, 86, 238, 0.53) ; */
