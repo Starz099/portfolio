@@ -275,7 +275,7 @@ const Skills = () => {
             fill="none"
             className="mr-1 object-contain"
           >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
               id="SVGRepo_tracerCarrier"
               strokeLinecap="round"
