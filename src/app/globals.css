@@ -220,3 +220,13 @@ html::-webkit-scrollbar {
     rgba(153, 0, 255, 0.747) 100%
   );
 }
+
+
+.react-activity-calendar {
+  width: 100%;
+}
+
+.react-activity-calendar svg {
+  width: 100% !important;
+  height: auto !important;
+}

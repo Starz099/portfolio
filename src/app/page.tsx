@@ -4,6 +4,7 @@ import Projects from "@/components/Projects/Projects";
 import Skills from "@/components/Skills/Skills";
 import Socials from "@/components/Socials/Socials";
 import Container from "@/components/ui/Container";
+import Github from "@/components/GithubContribution/Github";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Socials />
       <Projects />
       <Skills />
+      <Github />
     </Container>
   );
 }
