@@ -106,6 +106,7 @@ export default function Github() {
         const total = valid.reduce((sum, c) => sum + c.count, 0);
         setTotalContributions(total);
 
+        //@ts-expect-error validation done above
         const fullYear = buildFullYearData(valid);
         setContributions(fullYear);
       } catch (err) {
