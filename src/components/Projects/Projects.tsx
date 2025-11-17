@@ -1,42 +1,54 @@
 import ProjectsCard from "./projects-card";
+import v1 from "../../../videos/Video_Project.mp4.json";
 
 const Projects = () => {
+  // Sample project data - replace with your actual data
+  const projects = [
+    {
+      title: "Project One",
+      description:
+        "A full-stack web application built with modern technologies. Features include real-time updates, user authentication, and responsive design.",
+      video_asset: v1,
+      github_link: "https://github.com/yourusername/project-one",
+      demo_link: "https://project-one-demo.vercel.app",
+      technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    },
+    {
+      title: "Project Two",
+      description:
+        "An innovative solution for managing tasks and projects with team collaboration features.",
+      video_asset: v1, // Replace with actual video asset
+      github_link: "https://github.com/yourusername/project-two",
+      demo_link: "https://project-two-demo.vercel.app",
+      technologies: ["Node.js", "Express", "MongoDB", "React"],
+    },
+    {
+      title: "Project One",
+      description:
+        "A full-stack web application built with modern technologies. Features include real-time updates, user authentication, and responsive design.",
+      video_asset: v1,
+      github_link: "https://github.com/yourusername/project-one",
+      demo_link: "https://project-one-demo.vercel.app",
+      technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    },
+    {
+      title: "Project Two",
+      description:
+        "An innovative solution for managing tasks and projects with team collaboration features.",
+      video_asset: v1, // Replace with actual video asset
+      github_link: "https://github.com/yourusername/project-two",
+      demo_link: "https://project-two-demo.vercel.app",
+      technologies: ["Node.js", "Express", "MongoDB", "React"],
+    },
+  ];
+
   return (
     <div className="px-4 text-2xl">
       Projects
-      <div className="grid grid-cols-2 gap-4 mt-4">
-        <ProjectsCard
-          title="Project 1"
-          description="Description 1"
-          video_path="video1.mp4"
-          github_link="https://github.com/user/project1"
-          demo_link="https://user.github.io/project1"
-          technologies={["React", "TypeScript"]}
-        />
-        <ProjectsCard
-          title="Project 2"
-          description="Description 2"
-          video_path="video1.mp4"
-          github_link="https://github.com/user/project2"
-          demo_link="https://user.github.io/project2"
-          technologies={["JavaScript", "CSS"]}
-        />
-        <ProjectsCard
-          title="Project 3"
-          description="Description 3"
-          video_path="video1.mp4"
-          github_link="https://github.com/user/project3"
-          demo_link="https://user.github.io/project3"
-          technologies={["Python", "Django"]}
-        />
-        <ProjectsCard
-          title="Project 4"
-          description="Description 4"
-          video_path="video1.mp4"
-          github_link="https://github.com/user/project4"
-          demo_link="https://user.github.io/project4"
-          technologies={["Go", "Gin"]}
-        />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+        {projects.map((project, index) => (
+          <ProjectsCard key={index} {...project} />
+        ))}
       </div>
     </div>
   );

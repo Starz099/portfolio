@@ -12,7 +12,7 @@ import Container from "../ui/Container";
 
 const ActivityCalendar = dynamic(
   () => import("react-activity-calendar").then((mod) => mod.default),
-  { ssr: false }
+  { ssr: false },
 );
 
 type ContributionItem = {
@@ -42,7 +42,7 @@ export default function Github() {
   // Build exact 365-day rolling data (important for correct month order)
   function buildFullYearData(validContribs: ContributionItem[]) {
     const sorted = validContribs.sort(
-      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
     );
 
     const today = new Date();
@@ -69,7 +69,7 @@ export default function Github() {
       try {
         setIsLoading(true);
         const response = await fetch(
-          `${githubConfig.apiUrl}/${githubConfig.username}.json`
+          `${githubConfig.apiUrl}/${githubConfig.username}.json`,
         );
         const data: { contributions?: unknown[] } = await response.json();
 
@@ -93,7 +93,7 @@ export default function Github() {
               item &&
               typeof item === "object" &&
               "date" in item &&
-              "contributionCount" in item
+              "contributionCount" in item,
           )
           .map((item: GitHubContributionResponse) => ({
             date: item.date,
