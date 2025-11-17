@@ -1,5 +1,6 @@
 import ProjectsCard from "./projects-card";
 import v1 from "../../../videos/Video_Project.mp4.json";
+import Link from "next/link";
 
 const Projects = () => {
   // Sample project data - replace with your actual data
@@ -46,9 +47,18 @@ const Projects = () => {
     <div className="px-4 text-2xl">
       Projects
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-        {projects.map((project, index) => (
+        {projects.slice(0, 4).map((project, index) => (
           <ProjectsCard key={index} {...project} />
         ))}
+      </div>
+      {/* View More Button */}
+      <div className="flex justify-center mt-8">
+        <Link
+          href="/projects"
+          className="px-4 py-2 text-sm border border-accent text-accent-foreground rounded-lg hover:bg-primary/90 transition-colors shadow-md hover:shadow-lg hover:scale-[1.02] duration-200 hover:text-black"
+        >
+          Show all
+        </Link>
       </div>
     </div>
   );
