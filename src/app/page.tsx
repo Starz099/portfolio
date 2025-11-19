@@ -9,7 +9,7 @@ import Quote from "@/components/Quote/Quote";
 
 export default function Home() {
   return (
-    <Container className="min-h-screen py-16 px-4">
+    <Container className="min-h-screen px-4 py-16">
       <Hero />
       <Description />
       <Socials />

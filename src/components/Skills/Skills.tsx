@@ -2,10 +2,10 @@ import Image from "next/image";
 
 const Skills = () => {
   return (
-    <div className="px-4 text-2xl mt-8">
+    <div className="mt-8 px-4 text-2xl">
       Skills
-      <div className="flex flex-wrap gap-4 mt-4">
-        <div className=" text-sm py-1 bg-accent px-2 flex items-center justify-center border border-muted-foreground rounded-xl border-dashed">
+      <div className="mt-4 flex flex-wrap gap-4">
+        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
           <Image
             src="/logos/typescript.png"
             alt="Typescript"
@@ -15,7 +15,7 @@ const Skills = () => {
           />
           Typescript
         </div>
-        <div className=" text-sm py-1 bg-accent px-2 flex items-center justify-center border border-muted-foreground rounded-xl border-dashed">
+        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
           <svg
             width="16px"
             height="16px"
@@ -70,7 +70,7 @@ const Skills = () => {
           </svg>
           Next.js
         </div>
-        <div className=" text-sm py-1 bg-accent px-2 flex items-center justify-center border border-muted-foreground rounded-xl border-dashed">
+        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
           <svg
             width="16px"
             height="16px"
@@ -97,7 +97,7 @@ const Skills = () => {
           </svg>
           Node.js
         </div>
-        <div className=" text-sm py-1 bg-accent px-2 flex items-center justify-center border border-muted-foreground rounded-xl border-dashed">
+        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
           <svg
             width="16px"
             height="16px"
@@ -130,7 +130,7 @@ const Skills = () => {
           </svg>
           React
         </div>
-        <div className=" text-sm py-1 bg-accent px-2 flex items-center justify-center border border-muted-foreground rounded-xl border-dashed">
+        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
           <svg
             width="16px"
             height="16px"
@@ -164,7 +164,7 @@ const Skills = () => {
           </svg>{" "}
           PostgreSQL
         </div>
-        <div className=" text-sm py-1 bg-accent px-2 flex items-center justify-center border border-muted-foreground rounded-xl border-dashed">
+        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
           <svg
             width="16px"
             height="16px"
@@ -215,7 +215,7 @@ const Skills = () => {
           </svg>{" "}
           Tailwind CSS
         </div>
-        <div className=" text-sm py-1 bg-accent px-2 flex items-center justify-center border border-muted-foreground rounded-xl border-dashed">
+        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
           <svg
             fill="#7d7d7d"
             width="16px"
@@ -238,7 +238,7 @@ const Skills = () => {
           </svg>{" "}
           Express
         </div>
-        <div className=" text-sm py-1 bg-accent px-2 flex items-center justify-center border border-muted-foreground rounded-xl border-dashed">
+        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -256,7 +256,7 @@ const Skills = () => {
           </svg>
           Github
         </div>
-        <div className=" text-sm py-1 bg-accent px-2 flex items-center justify-center border border-muted-foreground rounded-xl border-dashed">
+        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
           <Image
             src="/logos/mongo.png"
             alt="MongoDB"
@@ -266,7 +266,7 @@ const Skills = () => {
           />
           MongoDB
         </div>
-        <div className=" text-sm py-1 bg-accent px-2 flex items-center justify-center border border-muted-foreground rounded-xl border-dashed">
+        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
           <svg
             width="16px"
             height="16px"

@@ -9,7 +9,7 @@ const Navbar = () => {
         <Links />
         <div className="flex items-center gap-4">
           <ThemeToggleButton
-            className=" border-2 border-accent rounded-2xl hover:scale-90 transition-transform duration-200"
+            className="border-accent rounded-2xl border-2 transition-transform duration-200 hover:scale-90"
             variant="rectangle"
             start="top-down"
             blur

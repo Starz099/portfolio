@@ -3,14 +3,14 @@ import Link from "next/link";
 
 const Avatar = () => {
   return (
-    <div className="border-2 border-accent rounded-2xl shadow-md overflow-hidden w-12 h-12 hover:scale-90 transition-transform duration-200 cursor-pointer">
+    <div className="border-accent h-12 w-12 cursor-pointer overflow-hidden rounded-2xl border-2 shadow-md transition-transform duration-200 hover:scale-90">
       <Link href="/">
         <Image
           alt="profile avatar"
           src="/images/profile.jpg"
           width={48}
           height={48}
-          className="-z-10 "
+          className="-z-10"
         ></Image>
       </Link>
     </div>

@@ -126,15 +126,15 @@ export default function Github() {
         {/* Header */}
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-2xl font-bold text-foreground">
+            <h2 className="text-foreground text-2xl font-bold">
               {githubConfig.title}
             </h2>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               <b>{githubConfig.username}</b>’s {githubConfig.subtitle}
             </p>
 
             {!isLoading && !hasError && totalContributions > 0 && (
-              <p className="text-sm text-primary font-medium mt-1">
+              <p className="text-primary mt-1 text-sm font-medium">
                 Total:{" "}
                 <span className="font-extrabold">
                   {totalContributions.toLocaleString()}{" "}
@@ -149,20 +149,20 @@ export default function Github() {
         {isLoading ? (
           <div className="flex items-center justify-center py-16">
             <div className="text-center">
-              <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-              <p className="text-sm text-muted-foreground">
+              <div className="border-primary mx-auto mb-4 h-8 w-8 animate-spin rounded-full border-2 border-t-transparent"></div>
+              <p className="text-muted-foreground text-sm">
                 {githubConfig.loadingState.description}
               </p>
             </div>
           </div>
         ) : hasError || contributions.length === 0 ? (
           /* Error State */
-          <div className="p-8 text-center text-muted-foreground border-2 border-dashed border-border rounded-xl">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center">
-              <GithubIcon className="w-8 h-8" />
+          <div className="text-muted-foreground border-border rounded-xl border-2 border-dashed p-8 text-center">
+            <div className="bg-muted mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full">
+              <GithubIcon className="h-8 w-8" />
             </div>
-            <p className="font-medium mb-2">{githubConfig.errorState.title}</p>
-            <p className="text-sm mb-4">
+            <p className="mb-2 font-medium">{githubConfig.errorState.title}</p>
+            <p className="mb-4 text-sm">
               {githubConfig.errorState.description}
             </p>
 
@@ -171,14 +171,14 @@ export default function Github() {
                 href={`https://github.com/${githubConfig.username}`}
                 className="inline-flex items-center gap-2"
               >
-                <GithubIcon className="w-4 h-4" />
+                <GithubIcon className="h-4 w-4" />
                 {githubConfig.errorState.buttonText}
               </Link>
             </Button>
           </div>
         ) : (
           /* Calendar UI Block */
-          <div className="rounded-xl bg-black/20 backdrop-blur-xl border border-white/10 p-6 shadow-lg">
+          <div className="rounded-xl border border-white/10 bg-black/20 p-6 shadow-lg backdrop-blur-xl">
             <div className="w-full overflow-hidden">
               <ActivityCalendar
                 data={contributions}

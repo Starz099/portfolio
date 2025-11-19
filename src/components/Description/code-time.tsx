@@ -21,18 +21,18 @@ export default function CodedTodayBadge() {
   }, []);
 
   return (
-    <div className="flex items-center gap-3 mt-4 text-muted-foreground">
+    <div className="text-muted-foreground mt-4 flex items-center gap-3">
       {text ? (
-        <div className="flex items-center gap-2 px-3 py-1.5 rounded bg-accent text-sm">
+        <div className="bg-accent flex items-center gap-2 rounded px-3 py-1.5 text-sm">
           <span>{text} coded today</span>
         </div>
       ) : (
-        <div className="px-3 py-1.5 rounded-full bg-zinc-700 animate-pulse text-sm">
+        <div className="animate-pulse rounded-full bg-zinc-700 px-3 py-1.5 text-sm">
           Loading…
         </div>
       )}
-      <div className="flex items-center gap-2 px-3 py-1.5 rounded bg-accent text-sm">
-        <div className="w-2 h-2 rounded-full bg-emerald-500" />
+      <div className="bg-accent flex items-center gap-2 rounded px-3 py-1.5 text-sm">
+        <div className="h-2 w-2 rounded-full bg-emerald-500" />
         <span>Open to work</span>
       </div>
     </div>

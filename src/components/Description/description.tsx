@@ -4,7 +4,7 @@ import ResumeButton from "./resume-button";
 
 const Description = () => {
   return (
-    <div className="px-4 flex flex-col gap-4">
+    <div className="flex flex-col gap-4 px-4">
       <CodedTodayBadge />
       <div className="text-muted-foreground">
         I create clean, thoughtful web applications that merge design and

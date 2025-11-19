@@ -8,11 +8,11 @@ const Links = () => {
   const pathname = usePathname();
 
   return (
-    <div className="flex items-end text-muted-foreground">
+    <div className="text-muted-foreground flex items-end">
       <Avatar />
       <Link
         href="/projects"
-        className={`ml-2 text-md font-medium hover:underline underline-offset-4 ${
+        className={`text-md ml-2 font-medium underline-offset-4 hover:underline ${
           pathname === "/projects" ? "text-accent-foreground" : ""
         }`}
       >
@@ -20,7 +20,7 @@ const Links = () => {
       </Link>
       <Link
         href="/work"
-        className={`ml-2 text-md font-medium hover:underline underline-offset-4 ${
+        className={`text-md ml-2 font-medium underline-offset-4 hover:underline ${
           pathname === "/work" ? "text-accent-foreground" : ""
         }`}
       >
@@ -28,7 +28,7 @@ const Links = () => {
       </Link>
       <Link
         href="/contact"
-        className={`ml-2 text-md font-medium hover:underline underline-offset-4 ${
+        className={`text-md ml-2 font-medium underline-offset-4 hover:underline ${
           pathname === "/contact" ? "text-accent-foreground" : ""
         }`}
       >

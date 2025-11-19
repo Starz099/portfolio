@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const ResumeButton = () => {
   return (
-    <div className="px-3 h-8 flex items-center border border-accent text-accent-foreground rounded text-sm">
+    <div className="border-accent text-accent-foreground flex h-8 items-center rounded border px-3 text-sm">
       <Link href="/resume" className="">
         View Resume
       </Link>

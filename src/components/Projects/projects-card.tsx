@@ -18,16 +18,12 @@ const ProjectsCard = (props: ProjectsProps) => {
 
   return (
     <div
-      className={`
-        overflow-hidden rounded-lg border border-border bg-card
-        transition-all duration-500 ease-out
-        ${isHovered ? "scale-105 shadow-2xl" : "scale-100 shadow-md"}
-      `}
+      className={`border-border bg-card flex flex-col overflow-hidden rounded-lg border transition-all duration-500 ease-out ${isHovered ? "scale-105 shadow-2xl" : "scale-100 shadow-md"} `}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Video Section */}
-      <div className="relative w-full aspect-video overflow-hidden">
+      <div className="relative aspect-video w-full overflow-hidden p-4">
         <NextVideo
           src={props.video_asset}
           controls={false}
@@ -39,9 +35,9 @@ const ProjectsCard = (props: ProjectsProps) => {
       </div>
 
       {/* Info Section - Always visible */}
-      <div className="p-4">
+      <div className="grow p-4">
         {/* Title - Always visible */}
-        <h2 className="text-xl font-bold text-accent-foreground mb-3">
+        <h2 className="text-accent-foreground mb-3 text-xl font-bold">
           {props.title}
         </h2>
 
@@ -54,47 +50,47 @@ const ProjectsCard = (props: ProjectsProps) => {
 
           {/* Technologies */}
           <div>
-            <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">
+            <h3 className="text-muted-foreground mb-2 text-xs font-semibold tracking-wide uppercase">
               Tech Stack
             </h3>
             <div className="flex flex-wrap gap-2">
               {props.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="px-2 py-1 text-xs font-medium bg-secondary text-secondary-foreground rounded-md"
+                  className="bg-secondary text-secondary-foreground rounded-md px-2 py-1 text-xs font-medium"
                 >
                   {tech}
                 </span>
               ))}
             </div>
           </div>
-
-          {/* Links */}
-          <div className="flex gap-3 pt-2">
-            {props.github_link && (
-              <Link
-                href={props.github_link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
-                onClick={(e) => e.stopPropagation()}
-              >
-                GitHub
-              </Link>
-            )}
-            {props.demo_link && (
-              <Link
-                href={props.demo_link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 text-sm font-medium bg-accent text-accent-foreground rounded-md hover:bg-accent/90 transition-colors"
-                onClick={(e) => e.stopPropagation()}
-              >
-                Live Demo
-              </Link>
-            )}
-          </div>
         </div>
+      </div>
+
+      {/* Links - Fixed at bottom */}
+      <div className="mt-auto flex gap-3 p-4 pt-0">
+        {props.github_link && (
+          <Link
+            href={props.github_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-md px-4 py-2 text-sm font-medium transition-colors"
+            onClick={(e) => e.stopPropagation()}
+          >
+            GitHub
+          </Link>
+        )}
+        {props.demo_link && (
+          <Link
+            href={props.demo_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-md px-4 py-2 text-sm font-medium transition-colors"
+            onClick={(e) => e.stopPropagation()}
+          >
+            Live Demo
+          </Link>
+        )}
       </div>
     </div>
   );

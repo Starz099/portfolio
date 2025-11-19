@@ -6,7 +6,7 @@ import Email from "../svgs/Email";
 
 const Socials = () => {
   return (
-    <div className="px-4 my-4 flex gap-1 text-muted-foreground">
+    <div className="text-muted-foreground my-4 flex gap-1 px-4">
       <Link
         href="https://github.com/Starz099"
         target="_blank"
