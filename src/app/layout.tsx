@@ -23,7 +23,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ReactLenis root>
+          <ReactLenis root className="">
             <div className="background-gradient"></div>
             <Navbar />
             {children}

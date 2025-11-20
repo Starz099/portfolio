@@ -5,7 +5,6 @@ import Skills from "@/components/Skills/Skills";
 import Socials from "@/components/Socials/Socials";
 import Container from "@/components/ui/Container";
 import Github from "@/components/GithubContribution/Github";
-import Quote from "@/components/Quote/Quote";
 
 export default function Home() {
   return (
@@ -16,10 +15,6 @@ export default function Home() {
       <Projects />
       <Skills />
       <Github />
-      <Quote
-        quote="When I believe in something, I’m like a dog with a bone."
-        author="Melissa McCarthy"
-      />
     </Container>
   );
 }
