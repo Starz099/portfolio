@@ -57,8 +57,8 @@ const ProjectsPage = () => {
 
   return (
     <Container className="px-4 py-16 sm:px-6 md:px-8">
-      <div className="space-y-8 text-center">
-        <div>
+      <div className="space-y-8">
+        <div className="text-center">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
             Projects
           </h1>
