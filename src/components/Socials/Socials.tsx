@@ -6,11 +6,12 @@ import Email from "../svgs/Email";
 
 const Socials = () => {
   return (
-    <div className="text-muted-foreground my-4 flex gap-1 px-4">
+    <div className="flex gap-2 px-4">
       <Link
         href="https://github.com/Starz099"
         target="_blank"
         rel="noopener noreferrer"
+        className="text-muted-foreground hover:text-foreground transform transition-colors duration-200 hover:scale-110"
       >
         <Github className="" />
       </Link>
@@ -18,6 +19,7 @@ const Socials = () => {
         href="https://x.com/mayank0166"
         target="_blank"
         rel="noopener noreferrer"
+        className="text-muted-foreground hover:text-foreground transform transition-colors duration-200 hover:scale-110"
       >
         <X className="" />
       </Link>
@@ -25,6 +27,7 @@ const Socials = () => {
         href="https://www.linkedin.com/in/mayank-23643b328/"
         target="_blank"
         rel="noopener noreferrer"
+        className="text-muted-foreground hover:text-foreground transform transition-colors duration-200 hover:scale-110"
       >
         <LinkedIn className="" />
       </Link>
@@ -32,6 +35,7 @@ const Socials = () => {
         href="mailto:mayankbh064@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
+        className="text-muted-foreground hover:text-foreground transform transition-colors duration-200 hover:scale-110"
       >
         <Email className="" />
       </Link>

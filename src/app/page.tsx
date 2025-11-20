@@ -8,13 +8,15 @@ import Github from "@/components/GithubContribution/Github";
 
 export default function Home() {
   return (
-    <Container className="min-h-screen px-4 py-16">
-      <Hero />
-      <Description />
-      <Socials />
-      <Projects />
-      <Skills />
-      <Github />
+    <Container className="min-h-screen px-4 py-12">
+      <div className="space-y-8">
+        <Hero />
+        <Description />
+        <Socials />
+        <Projects />
+        <Skills />
+        <Github />
+      </div>
     </Container>
   );
 }
