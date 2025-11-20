@@ -1,9 +1,15 @@
 import Image from "next/image";
+import TextReveal from "../ui/TextReveal";
 
 const Skills = () => {
   return (
     <div className="px-4">
-      <h2 className="mb-4 text-3xl font-semibold tracking-tight">Skills</h2>
+      <TextReveal
+        className="mb-4 text-3xl font-semibold tracking-tight"
+        delay={100}
+      >
+        Skills
+      </TextReveal>
       <div className="flex flex-wrap gap-3">
         <div className="bg-secondary/80 border-border/50 hover:border-border flex items-center justify-center rounded-lg border px-3 py-2 text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-sm">
           <Image

@@ -18,7 +18,7 @@ const ProjectsCard = (props: ProjectsProps) => {
 
   return (
     <div
-      className={`group border-border/50 bg-card relative flex flex-col overflow-hidden rounded-xl border transition-all duration-300 ease-out ${isHovered ? "border-border scale-[1.02] shadow-lg" : "shadow-sm"} `}
+      className={`group border-border/50 bg-card relative flex flex-col overflow-hidden rounded-xl border transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.01] ${isHovered ? "border-border shadow-lg" : "shadow-sm"} `}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

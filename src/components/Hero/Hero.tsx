@@ -1,3 +1,5 @@
+import TextReveal from "../ui/TextReveal";
+
 const Hero = () => {
   return (
     <div className="px-4">
@@ -8,9 +10,12 @@ const Hero = () => {
             Mayank
           </span>
         </div>
-        <div className="text-muted-foreground text-xl font-medium md:text-2xl">
+        <TextReveal
+          className="text-muted-foreground text-xl font-medium md:text-2xl"
+          delay={300}
+        >
           A Full Stack Web Developer
-        </div>
+        </TextReveal>
       </div>
     </div>
   );

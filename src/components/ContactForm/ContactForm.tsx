@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Button } from "@/components/ui/button";
+import RippleButton from "@/components/ui/RippleButton";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -73,12 +73,12 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="mx-auto w-full max-w-2xl">
+    <div className="w-full">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div className="grid gap-6 sm:grid-cols-2">
           {/* Name Field */}
           <div className="space-y-2">
-            <Label htmlFor="name" className="text-sm font-medium">
+            <Label htmlFor="name" className="text-left text-sm font-medium">
               Name <span className="text-destructive">*</span>
             </Label>
             <Input
@@ -98,7 +98,7 @@ export default function ContactForm() {
 
           {/* Email Field */}
           <div className="space-y-2">
-            <Label htmlFor="email" className="text-sm font-medium">
+            <Label htmlFor="email" className="text-left text-sm font-medium">
               Email <span className="text-destructive">*</span>
             </Label>
             <Input
@@ -119,7 +119,7 @@ export default function ContactForm() {
 
         {/* Subject Field */}
         <div className="space-y-2">
-          <Label htmlFor="subject" className="text-sm font-medium">
+          <Label htmlFor="subject" className="text-left text-sm font-medium">
             Subject <span className="text-destructive">*</span>
           </Label>
           <Input
@@ -139,7 +139,7 @@ export default function ContactForm() {
 
         {/* Message Field */}
         <div className="space-y-2">
-          <Label htmlFor="message" className="text-sm font-medium">
+          <Label htmlFor="message" className="text-left text-sm font-medium">
             Message <span className="text-destructive">*</span>
           </Label>
           <Textarea
@@ -158,11 +158,10 @@ export default function ContactForm() {
 
         {/* Submit Button */}
         <div className="pt-2">
-          <Button
+          <RippleButton
             type="submit"
             disabled={isSubmitting}
-            className="w-full min-w-[140px] transition-all duration-200 hover:shadow-md sm:w-auto"
-            size="lg"
+            className="w-full min-w-[140px] px-8 py-3 transition-all duration-200 hover:shadow-md sm:w-auto"
           >
             {isSubmitting ? (
               <span className="flex items-center gap-2">
@@ -191,7 +190,7 @@ export default function ContactForm() {
             ) : (
               "Send Message"
             )}
-          </Button>
+          </RippleButton>
         </div>
 
         {/* Status Messages */}

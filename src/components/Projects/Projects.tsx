@@ -1,6 +1,7 @@
 import ProjectsCard from "./projects-card";
 import Link from "next/link";
 import v1 from "../../../videos/Video_Project.mp4.json";
+import TextReveal from "../ui/TextReveal";
 const projects = [
   {
     title: "Writso",
@@ -55,7 +56,12 @@ const projects = [
 const Projects = () => {
   return (
     <div className="px-4">
-      <h2 className="mb-4 text-3xl font-semibold tracking-tight">Projects</h2>
+      <TextReveal
+        className="mb-4 text-3xl font-semibold tracking-tight"
+        delay={100}
+      >
+        Projects
+      </TextReveal>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {projects.slice(0, 4).map((project, index) => (
           <ProjectsCard key={index} {...project} />

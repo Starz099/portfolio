@@ -8,31 +8,40 @@ const Links = () => {
   const pathname = usePathname();
 
   return (
-    <div className="text-muted-foreground flex items-end">
+    <div className="text-muted-foreground flex items-end gap-1">
       <Avatar />
       <Link
         href="/projects"
-        className={`text-md ml-2 font-medium underline-offset-4 hover:underline ${
-          pathname === "/projects" ? "text-accent-foreground" : ""
+        className={`text-md hover:text-foreground relative ml-1 px-2 py-1 font-medium transition-all duration-200 ${
+          pathname === "/projects" ? "text-foreground" : ""
         }`}
       >
-        Projects
+        <span className="relative z-10">Projects</span>
+        {pathname === "/projects" && (
+          <span className="bg-accent/10 absolute inset-0 rounded-md" />
+        )}
       </Link>
       <Link
         href="/work"
-        className={`text-md ml-2 font-medium underline-offset-4 hover:underline ${
-          pathname === "/work" ? "text-accent-foreground" : ""
+        className={`text-md hover:text-foreground relative ml-1 px-2 py-1 font-medium transition-all duration-200 ${
+          pathname === "/work" ? "text-foreground" : ""
         }`}
       >
-        Work
+        <span className="relative z-10">Work</span>
+        {pathname === "/work" && (
+          <span className="bg-accent/10 absolute inset-0 rounded-md" />
+        )}
       </Link>
       <Link
         href="/contact"
-        className={`text-md ml-2 font-medium underline-offset-4 hover:underline ${
-          pathname === "/contact" ? "text-accent-foreground" : ""
+        className={`text-md hover:text-foreground relative ml-1 px-2 py-1 font-medium transition-all duration-200 ${
+          pathname === "/contact" ? "text-foreground" : ""
         }`}
       >
-        Contact
+        <span className="relative z-10">Contact</span>
+        {pathname === "/contact" && (
+          <span className="bg-accent/10 absolute inset-0 rounded-md" />
+        )}
       </Link>
     </div>
   );
