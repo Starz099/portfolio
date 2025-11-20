@@ -5,7 +5,7 @@ const Skills = () => {
   return (
     <div className="px-4">
       <TextReveal
-        className="mb-4 text-3xl font-semibold tracking-tight"
+        className="mb-8 text-3xl font-semibold tracking-tight"
         delay={100}
       >
         Skills

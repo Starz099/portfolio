@@ -126,7 +126,7 @@ export default function Github() {
         {/* Header */}
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-foreground text-2xl font-bold">
+            <h2 className="text-foreground texwt-2xl mb-4 font-bold">
               {githubConfig.title}
             </h2>
             <p className="text-muted-foreground text-sm">
