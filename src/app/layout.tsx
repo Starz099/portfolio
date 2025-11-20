@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import ReactLenis from "lenis/react";
 import Navbar from "@/components/Navbar/navbar";
 import Footer from "@/components/Footer/Footer";
+import PageTransition from "@/components/ui/PageTransition";
 export const metadata: Metadata = {
   title: "Mayank",
   description: "Learning. Building. Sharing.",
@@ -23,10 +24,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ReactLenis root>
+          <ReactLenis root className="">
             <div className="background-gradient"></div>
             <Navbar />
-            {children}
+            <PageTransition variant="blur-fade">{children}</PageTransition>
             <Footer />
           </ReactLenis>
         </ThemeProvider>

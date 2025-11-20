@@ -72,23 +72,23 @@
 :root {
   --radius: 0.5rem;
   --background: oklch(0.99 0 0);
-  --foreground: oklch(0 0 0);
+  --foreground: oklch(0.15 0 0);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0 0 0);
+  --card-foreground: oklch(0.15 0 0);
   --popover: oklch(0.99 0 0);
-  --popover-foreground: oklch(0 0 0);
-  --primary: oklch(0 0 0);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.94 0 0);
-  --secondary-foreground: oklch(0 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.44 0 0);
-  --accent: oklch(0.94 0 0);
-  --accent-foreground: oklch(0 0 0);
+  --popover-foreground: oklch(0.15 0 0);
+  --primary: oklch(0.2 0 0);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.96 0.005 270);
+  --secondary-foreground: oklch(0.2 0 0);
+  --muted: oklch(0.97 0.003 270);
+  --muted-foreground: oklch(0.5 0 0);
+  --accent: oklch(0.96 0.008 270);
+  --accent-foreground: oklch(0.2 0 0);
   --destructive: oklch(0.63 0.19 23.03);
-  --border: oklch(0.92 0 0);
-  --input: oklch(0.94 0 0);
-  --ring: oklch(0 0 0);
+  --border: oklch(0.9 0.004 270);
+  --input: oklch(0.98 0.003 270);
+  --ring: oklch(0.3 0 0);
   --chart-1: oklch(0.81 0.17 75.35);
   --chart-2: oklch(0.55 0.22 264.53);
   --chart-3: oklch(0.72 0 0);
@@ -131,24 +131,24 @@
 }
 
 .dark {
-  --background: oklch(0 0 0);
-  --foreground: oklch(1 0 0);
-  --card: oklch(0.14 0 0);
-  --card-foreground: oklch(1 0 0);
+  --background: oklch(0.1 0 0);
+  --foreground: oklch(0.95 0 0);
+  --card: oklch(0.15 0.005 270);
+  --card-foreground: oklch(0.95 0 0);
   --popover: oklch(0.18 0 0);
-  --popover-foreground: oklch(1 0 0);
-  --primary: oklch(1 0 0);
-  --primary-foreground: oklch(0 0 0);
-  --secondary: oklch(0.25 0 0);
-  --secondary-foreground: oklch(1 0 0);
-  --muted: oklch(0.23 0 0);
-  --muted-foreground: oklch(0.72 0 0);
-  --accent: oklch(0.32 0 0);
-  --accent-foreground: oklch(1 0 0);
+  --popover-foreground: oklch(0.95 0 0);
+  --primary: oklch(0.95 0 0);
+  --primary-foreground: oklch(0.15 0 0);
+  --secondary: oklch(0.2 0.01 270);
+  --secondary-foreground: oklch(0.95 0 0);
+  --muted: oklch(0.2 0.008 270);
+  --muted-foreground: oklch(0.65 0 0);
+  --accent: oklch(0.25 0.015 270);
+  --accent-foreground: oklch(0.95 0 0);
   --destructive: oklch(0.69 0.2 23.91);
-  --border: oklch(0.26 0 0);
-  --input: oklch(0.32 0 0);
-  --ring: oklch(0.72 0 0);
+  --border: oklch(0.25 0.008 270);
+  --input: oklch(0.2 0.008 270);
+  --ring: oklch(0.65 0 0);
   --chart-1: oklch(0.81 0.17 75.35);
   --chart-2: oklch(0.58 0.21 260.84);
   --chart-3: oklch(0.56 0 0);
@@ -194,9 +194,32 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
-    letter-spacing: var(--tracking-normal);
+    letter-spacing: -0.01em;
+    font-feature-settings:
+      "liga" 1,
+      "calt" 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tight;
+    font-weight: 600;
+  }
+
+  .animate-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
   }
 }
 
@@ -205,20 +228,33 @@ html::-webkit-scrollbar {
 }
 
 .background-gradient {
-  height: 50vh;
-  width: 80vw;
+  height: 60vh;
+  width: 70vw;
   border-radius: 50%;
-  filter: blur(6vw);
+  filter: blur(8vw);
   position: fixed;
-  top: -320px;
-  right: 3vw;
-  /* background-color: rgba(84, 86, 238, 0.53) ; */
+  top: -25vh;
+  right: -10vw;
+  opacity: 0.18;
   background: radial-gradient(
-    circle at center,
-    rgba(84, 86, 238, 0.53) 0%,
-    rgba(173, 72, 255, 0.25) 25%,
-    rgba(84, 86, 238, 0.1) 50%,
-    rgba(153, 0, 255, 0.747) 100%
+    circle at 30% 40%,
+    rgba(236, 72, 153, 0.35) 0%,
+    rgba(219, 39, 119, 0.25) 30%,
+    rgba(190, 24, 93, 0.15) 60%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dark .background-gradient {
+  opacity: 0.22;
+  background: radial-gradient(
+    circle at 30% 40%,
+    rgba(236, 72, 153, 0.28) 0%,
+    rgba(219, 39, 119, 0.18) 30%,
+    rgba(190, 24, 93, 0.12) 60%,
+    transparent 100%
   );
 }
 

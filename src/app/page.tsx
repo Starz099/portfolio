@@ -5,21 +5,31 @@ import Skills from "@/components/Skills/Skills";
 import Socials from "@/components/Socials/Socials";
 import Container from "@/components/ui/Container";
 import Github from "@/components/GithubContribution/Github";
-import Quote from "@/components/Quote/Quote";
+import AnimatedSection from "@/components/ui/AnimatedSection";
 
 export default function Home() {
   return (
-    <Container className="min-h-screen px-4 py-16">
-      <Hero />
-      <Description />
-      <Socials />
-      <Projects />
-      <Skills />
-      <Github />
-      <Quote
-        quote="When I believe in something, I’m like a dog with a bone."
-        author="Melissa McCarthy"
-      />
+    <Container className="min-h-screen px-4 py-12">
+      <div className="space-y-8">
+        <AnimatedSection>
+          <Hero />
+        </AnimatedSection>
+        <AnimatedSection delay={100}>
+          <Description />
+        </AnimatedSection>
+        <AnimatedSection delay={200}>
+          <Socials />
+        </AnimatedSection>
+        <AnimatedSection delay={100}>
+          <Projects />
+        </AnimatedSection>
+        <AnimatedSection delay={100}>
+          <Skills />
+        </AnimatedSection>
+        <AnimatedSection delay={100}>
+          <Github />
+        </AnimatedSection>
+      </div>
     </Container>
   );
 }

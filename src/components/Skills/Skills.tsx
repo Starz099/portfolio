@@ -1,26 +1,32 @@
 import Image from "next/image";
+import TextReveal from "../ui/TextReveal";
 
 const Skills = () => {
   return (
-    <div className="mt-8 px-4 text-2xl">
-      Skills
-      <div className="mt-4 flex flex-wrap gap-4">
-        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
+    <div className="px-4">
+      <TextReveal
+        className="mb-4 text-3xl font-semibold tracking-tight"
+        delay={100}
+      >
+        Skills
+      </TextReveal>
+      <div className="flex flex-wrap gap-3">
+        <div className="bg-secondary/80 border-border/50 hover:border-border flex items-center justify-center rounded-lg border px-3 py-2 text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-sm">
           <Image
             src="/logos/typescript.png"
             alt="Typescript"
             width={16}
             height={16}
-            className="mr-1 object-contain"
+            className="mr-2 object-contain"
           />
           Typescript
         </div>
-        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
+        <div className="bg-secondary/80 border-border/50 hover:border-border flex items-center justify-center rounded-lg border px-3 py-2 text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-sm">
           <svg
             width="16px"
             height="16px"
             fill="#000000"
-            className="mr-1 object-contain"
+            className="mr-2 object-contain"
             viewBox="0 0 128 128"
           >
             <circle cx="64" cy="64" r="64"></circle>
@@ -70,7 +76,7 @@ const Skills = () => {
           </svg>
           Next.js
         </div>
-        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
+        <div className="bg-secondary/80 border-border/50 hover:border-border flex items-center justify-center rounded-lg border px-3 py-2 text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-sm">
           <svg
             width="16px"
             height="16px"
@@ -78,7 +84,7 @@ const Skills = () => {
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMinYMin meet"
             fill="#000000"
-            className="mr-1 object-contain"
+            className="mr-2 object-contain"
           >
             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
@@ -97,7 +103,7 @@ const Skills = () => {
           </svg>
           Node.js
         </div>
-        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
+        <div className="bg-secondary/80 border-border/50 hover:border-border flex items-center justify-center rounded-lg border px-3 py-2 text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-sm">
           <svg
             width="16px"
             height="16px"
@@ -112,7 +118,7 @@ const Skills = () => {
               strokeLinejoin="round"
               stroke="#CCCCCC"
               strokeWidth="0.96"
-              className="mr-1 object-contain"
+              className="mr-2 object-contain"
             ></g>
             <g id="SVGRepo_iconCarrier">
               {" "}
@@ -130,7 +136,7 @@ const Skills = () => {
           </svg>
           React
         </div>
-        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
+        <div className="bg-secondary/80 border-border/50 hover:border-border flex items-center justify-center rounded-lg border px-3 py-2 text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-sm">
           <svg
             width="16px"
             height="16px"
@@ -138,7 +144,7 @@ const Skills = () => {
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMinYMin meet"
             fill="#000000"
-            className="mr-1 object-contain"
+            className="mr-2 object-contain"
           >
             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
@@ -164,7 +170,7 @@ const Skills = () => {
           </svg>{" "}
           PostgreSQL
         </div>
-        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
+        <div className="bg-secondary/80 border-border/50 hover:border-border flex items-center justify-center rounded-lg border px-3 py-2 text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-sm">
           <svg
             width="16px"
             height="16px"
@@ -174,7 +180,7 @@ const Skills = () => {
             xmlnsXlink="http://www.w3.org/1999/xlink"
             preserveAspectRatio="xMidYMid"
             fill="#000000"
-            className="mr-1 object-contain"
+            className="mr-2 object-contain"
           >
             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
@@ -215,7 +221,7 @@ const Skills = () => {
           </svg>{" "}
           Tailwind CSS
         </div>
-        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
+        <div className="bg-secondary/80 border-border/50 hover:border-border flex items-center justify-center rounded-lg border px-3 py-2 text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-sm">
           <svg
             fill="#7d7d7d"
             width="16px"
@@ -224,7 +230,7 @@ const Skills = () => {
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             stroke="#7d7d7d"
-            className="mr-1 object-contain"
+            className="mr-2 object-contain"
           >
             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
@@ -238,7 +244,7 @@ const Skills = () => {
           </svg>{" "}
           Express
         </div>
-        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
+        <div className="bg-secondary/80 border-border/50 hover:border-border flex items-center justify-center rounded-lg border px-3 py-2 text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -256,24 +262,24 @@ const Skills = () => {
           </svg>
           Github
         </div>
-        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
+        <div className="bg-secondary/80 border-border/50 hover:border-border flex items-center justify-center rounded-lg border px-3 py-2 text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-sm">
           <Image
             src="/logos/mongo.png"
             alt="MongoDB"
             width={16}
             height={16}
-            className="mr-1 object-contain"
+            className="mr-2 object-contain"
           />
           MongoDB
         </div>
-        <div className="bg-accent border-muted-foreground flex items-center justify-center rounded-xl border border-dashed px-2 py-1 text-sm">
+        <div className="bg-secondary/80 border-border/50 hover:border-border flex items-center justify-center rounded-lg border px-3 py-2 text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-sm">
           <svg
             width="16px"
             height="16px"
             viewBox="-0.64 -0.64 17.28 17.28"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            className="mr-1 object-contain"
+            className="mr-2 object-contain"
           >
             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g

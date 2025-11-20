@@ -18,12 +18,13 @@ const ProjectsCard = (props: ProjectsProps) => {
 
   return (
     <div
-      className={`border-border bg-card flex flex-col overflow-hidden rounded-lg border transition-all duration-500 ease-out ${isHovered ? "scale-105 shadow-2xl" : "scale-100 shadow-md"} `}
+      className={`group border-border/50 bg-card relative flex flex-col overflow-hidden rounded-xl border transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.01] ${isHovered ? "border-border shadow-lg" : "shadow-sm"} `}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Video Section */}
-      <div className="relative aspect-video w-full overflow-hidden p-4">
+      <div className="relative aspect-video w-full overflow-hidden">
+        <div className="bg-muted/30 absolute inset-0 transition-colors duration-300 group-hover:bg-transparent" />
         <NextVideo
           src={props.video_asset}
           controls={false}
@@ -35,14 +36,14 @@ const ProjectsCard = (props: ProjectsProps) => {
       </div>
 
       {/* Info Section - Always visible */}
-      <div className="grow p-4">
+      <div className="grow space-y-4 p-6">
         {/* Title - Always visible */}
-        <h2 className="text-accent-foreground mb-3 text-xl font-bold">
+        <h2 className="text-foreground text-xl font-semibold tracking-tight">
           {props.title}
         </h2>
 
         {/* Details - Always visible */}
-        <div className="space-y-3">
+        <div className="space-y-4">
           {/* Description */}
           <p className="text-muted-foreground text-sm leading-relaxed">
             {props.description}
@@ -50,14 +51,14 @@ const ProjectsCard = (props: ProjectsProps) => {
 
           {/* Technologies */}
           <div>
-            <h3 className="text-muted-foreground mb-2 text-xs font-semibold tracking-wide uppercase">
+            <h3 className="text-muted-foreground mb-2 text-xs font-semibold tracking-wider uppercase">
               Tech Stack
             </h3>
             <div className="flex flex-wrap gap-2">
               {props.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="bg-secondary text-secondary-foreground rounded-md px-2 py-1 text-xs font-medium"
+                  className="bg-secondary/80 text-secondary-foreground border-border/30 rounded-md border px-2.5 py-1 text-xs font-medium"
                 >
                   {tech}
                 </span>
@@ -68,13 +69,13 @@ const ProjectsCard = (props: ProjectsProps) => {
       </div>
 
       {/* Links - Fixed at bottom */}
-      <div className="mt-auto flex gap-3 p-4 pt-0">
+      <div className="mt-auto flex gap-3 p-6 pt-0">
         {props.github_link && (
           <Link
             href={props.github_link}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-md px-4 py-2 text-sm font-medium transition-colors"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 hover:shadow-md"
             onClick={(e) => e.stopPropagation()}
           >
             GitHub
@@ -85,7 +86,7 @@ const ProjectsCard = (props: ProjectsProps) => {
             href={props.demo_link}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-md px-4 py-2 text-sm font-medium transition-colors"
+            className="border-border bg-card hover:bg-accent text-foreground rounded-lg border px-4 py-2 text-sm font-medium transition-all duration-200 hover:shadow-md"
             onClick={(e) => e.stopPropagation()}
           >
             Live Demo

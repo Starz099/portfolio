@@ -3,7 +3,7 @@ import Container from "../ui/Container";
 const Quote = (props: { quote: string; author: string }) => {
   return (
     <div className="px-4">
-      <Container className="text-muted-foreground relative mt-8 rounded-none p-8">
+      <Container className="text-muted-foreground relative rounded-none p-8">
         {/* Top-Left corner */}
         <span className="absolute top-0 left-0 h-8 w-8 rounded-none border-t-2 border-l-2"></span>
 
