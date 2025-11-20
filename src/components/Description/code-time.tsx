@@ -32,7 +32,10 @@ export default function CodedTodayBadge() {
         </div>
       )}
       <div className="bg-accent flex items-center gap-2 rounded px-3 py-1.5 text-sm">
-        <div className="h-2 w-2 rounded-full bg-emerald-500" />
+        <div className="relative flex h-2 w-2">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+        </div>
         <span>Open to work</span>
       </div>
     </div>
