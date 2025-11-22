@@ -1,0 +1,23 @@
+{
+  "status": "ready",
+  "originalFilePath": "videos/hand_and_brain_demo.mp4",
+  "provider": "mux",
+  "providerMetadata": {
+    "mux": {
+      "uploadId": "L9DEUlCRCH56Te02P4MmHH3FNwEWnQcscV01hk02CREjLY",
+      "assetId": "fyWGkzjLg02Ti1iaS01a5fU6jgFjImvW1KNxrd6Ny1qAA",
+      "playbackId": "gXx01r01ivGwsLlqxl2sO8tUopVMtbPcCCtnsJQGau2JQ"
+    }
+  },
+  "createdAt": 1763782457126,
+  "updatedAt": 1763782721645,
+  "size": 76475371,
+  "sources": [
+    {
+      "src": "https://stream.mux.com/gXx01r01ivGwsLlqxl2sO8tUopVMtbPcCCtnsJQGau2JQ.m3u8",
+      "type": "application/x-mpegURL"
+    }
+  ],
+  "poster": "https://image.mux.com/gXx01r01ivGwsLlqxl2sO8tUopVMtbPcCCtnsJQGau2JQ/thumbnail.webp",
+  "blurDataURL": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAADQAgCdASoQAAkAAQAcJQBOh2AGoQVgA5xbNzz0obOAAP7tKH/4Wq9fGE2D1JmF34LY6roKE5rJa///5ppWf0cWmj+HI9gxnD//1jVeOPNhPWs6j9ZE4SvXZwZfKlLT2WbP/xN+p362fdsRGirh7R1dvZyMsNoBjeqQp7HGhqho+pkbNdqt3C7xb3S7+DbprWviZRYWEXY3wFCekZf8gAAA"
+}

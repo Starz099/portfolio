@@ -1,0 +1,23 @@
+{
+  "status": "ready",
+  "originalFilePath": "videos/second_brain_demo.mp4",
+  "provider": "mux",
+  "providerMetadata": {
+    "mux": {
+      "uploadId": "900VJ9eHLBCmicNxYMaehEGJ7IryLKRN54eCmLZqpqjI",
+      "assetId": "W8B8on2cuA02SXftGL55R00iy8ywTX1NuDmEjf02NK6sLw",
+      "playbackId": "ekCwMVkG4LbtEtX00XHxL5SgrTI00X3ugMbGrMBaAfRNQ"
+    }
+  },
+  "createdAt": 1763782457128,
+  "updatedAt": 1763782783743,
+  "size": 47782848,
+  "sources": [
+    {
+      "src": "https://stream.mux.com/ekCwMVkG4LbtEtX00XHxL5SgrTI00X3ugMbGrMBaAfRNQ.m3u8",
+      "type": "application/x-mpegURL"
+    }
+  ],
+  "poster": "https://image.mux.com/ekCwMVkG4LbtEtX00XHxL5SgrTI00X3ugMbGrMBaAfRNQ/thumbnail.webp",
+  "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAQCdASoQAAkAAQAcJZQCdAD0h/tsAAD+/tLzrt+BQMOd9Nkqx8oQdXyVMQBMjfyer3VbDa5xsiPrN8Wh3Y1T6AI0K7Gkwp6ngnUVvgSm444lk3rBpQAA"
+}

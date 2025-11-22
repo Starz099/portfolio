@@ -1,0 +1,23 @@
+{
+  "status": "ready",
+  "originalFilePath": "videos/writso_demo.mp4",
+  "provider": "mux",
+  "providerMetadata": {
+    "mux": {
+      "uploadId": "yBfkV75tA53iwy3b200mP8aoB4EGduMAu7EZeZnPKS02g",
+      "assetId": "TR1PI5vTP1Q6WW1bzBB5gb31rseZuGc1rn53K4mLCCY",
+      "playbackId": "9IfxzYdvnoBxoJ00HSlR00pDBNp2hT01oUTAV6IZCYjJok"
+    }
+  },
+  "createdAt": 1763782457127,
+  "updatedAt": 1763782708140,
+  "size": 38232062,
+  "sources": [
+    {
+      "src": "https://stream.mux.com/9IfxzYdvnoBxoJ00HSlR00pDBNp2hT01oUTAV6IZCYjJok.m3u8",
+      "type": "application/x-mpegURL"
+    }
+  ],
+  "poster": "https://image.mux.com/9IfxzYdvnoBxoJ00HSlR00pDBNp2hT01oUTAV6IZCYjJok/thumbnail.webp",
+  "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoQAAkAAQAcJQBOgCHdUcFngAD++At/2n+fuf389iLgvV/pLE24Uhkmx+rIec34WoGY1XF1I3WJNHLXh7MSKSAA"
+}

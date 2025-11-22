@@ -1,0 +1,23 @@
+{
+  "status": "ready",
+  "originalFilePath": "videos/token_launchpad_demo.mp4",
+  "provider": "mux",
+  "providerMetadata": {
+    "mux": {
+      "uploadId": "Qa52abwDuYhkhNH3n1rJZrnnfYbuKpInngDE5fkcclU",
+      "assetId": "i51l799qw8WAnh1R98hxp2jkl40259Wzum01niFOfh7z00",
+      "playbackId": "nivoGP8L01ji6dfZQ9pq89fUS11juZEAjDiHeak01uICg"
+    }
+  },
+  "createdAt": 1763782457128,
+  "updatedAt": 1763782701570,
+  "size": 8431757,
+  "sources": [
+    {
+      "src": "https://stream.mux.com/nivoGP8L01ji6dfZQ9pq89fUS11juZEAjDiHeak01uICg.m3u8",
+      "type": "application/x-mpegURL"
+    }
+  ],
+  "poster": "https://image.mux.com/nivoGP8L01ji6dfZQ9pq89fUS11juZEAjDiHeak01uICg/thumbnail.webp",
+  "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoQAAkAAQAcJYwCdAD2PFFuGAAA/v6Iz6iaorD5ghS18WxhS50CM44AroD4M+62creTssE/CDbkaUAA"
+}

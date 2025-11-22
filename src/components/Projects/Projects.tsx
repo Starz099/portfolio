@@ -1,13 +1,16 @@
 import ProjectsCard from "./projects-card";
 import Link from "next/link";
-import v1 from "../../../videos/Video_Project.mp4.json";
+import writso_demo from "../../../videos/writso_demo.mp4.json";
+import hand_and_brain_demo from "../../../videos/hand_and_brain_demo.mp4.json";
+import token_launchpad_demo from "../../../videos/token_launchpad_demo.mp4.json";
+import second_brain_demo from "../../../videos/second_brain_demo.mp4.json";
 import TextReveal from "../ui/TextReveal";
 const projects = [
   {
     title: "Writso",
     description:
       "A writing practice web app that helps users improve their writing skills through daily prompts, AI reviews, progress tracking, and community feedback.",
-    video_asset: v1,
+    video_asset: writso_demo,
     github_link: "https://github.com/Starz099/writso",
     demo_link: "https://writso.vercel.app",
     technologies: [
@@ -22,7 +25,7 @@ const projects = [
     title: "Hand and Brain Chess",
     description:
       "An online platform for playing Hand and Brain Chess, allowing users to team up and enjoy this unique chess variant with real-time gameplay.",
-    video_asset: v1, // Replace with actual video asset
+    video_asset: hand_and_brain_demo, // Replace with actual video asset
     github_link: "https://github.com/Starz099/chess",
     demo_link: "https://chess-nu-seven.vercel.app/",
     technologies: [
@@ -37,7 +40,7 @@ const projects = [
     title: "Token-Launchpad",
     description:
       "A decentralized platform that enables users to create custom Solana tokens.",
-    video_asset: v1,
+    video_asset: token_launchpad_demo,
     github_link: "https://github.com/yourusername/project-one",
     demo_link: "https://project-one-demo.vercel.app",
     technologies: ["React", "JavaScript", "Solana_web3.js", "Tailwind CSS"],
@@ -46,7 +49,7 @@ const projects = [
     title: "Second Brain",
     description:
       "Personal knowledge management tool for saving, organising, and sharing notes/links.",
-    video_asset: v1, // Replace with actual video asset
+    video_asset: second_brain_demo, // Replace with actual video asset
     github_link: "https://github.com/Starz099/second-brain",
     demo_link: "https://second-brain-sage.vercel.app/",
     technologies: ["Node.js", "Express", "MongoDB", "React"],

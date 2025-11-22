@@ -1,6 +1,6 @@
-import SplitText from "@/components/SplitText";
 import Container from "@/components/ui/Container";
 import { Separator } from "@/components/ui/separator";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 const page = () => {
   return (
@@ -16,32 +16,11 @@ const page = () => {
         </div>
         <Separator />
 
-        <div className="px-4 text-center text-2xl font-medium">
-          <SplitText
-            text={`I build cool things.`}
-            className="text-center text-2xl font-semibold"
-            delay={50}
-            duration={0.6}
-            ease="power3.out"
-            splitType="chars"
-            from={{ opacity: 0, y: 40 }}
-            to={{ opacity: 1, y: 0 }}
-            threshold={0.1}
-            rootMargin="-100px"
-            textAlign="center"
-          />
-          <SplitText
-            text={`You could be the first person I build them for.`}
-            className="text-center text-2xl font-semibold"
-            delay={50}
-            duration={0.6}
-            ease="power3.out"
-            splitType="chars"
-            from={{ opacity: 0, y: 40 }}
-            to={{ opacity: 1, y: 0 }}
-            threshold={0.1}
-            rootMargin="-100px"
-            textAlign="center"
+        <div className="px-4 text-center text-2xl font-medium whitespace-pre-line">
+          <TextGenerateEffect
+            words={
+              "I build cool things.\nYou could be the first person I build them for."
+            }
           />
         </div>
       </div>
