@@ -207,6 +207,17 @@
       "calt" 1;
   }
 
+  /* Text Selection Styling */
+  ::selection {
+    background-color: rgba(236, 72, 153, 0.3);
+    color: inherit;
+  }
+
+  ::-moz-selection {
+    background-color: rgba(236, 72, 153, 0.3);
+    color: inherit;
+  }
+
   h1,
   h2,
   h3,

@@ -6,6 +6,7 @@ import Socials from "@/components/Socials/Socials";
 import Container from "@/components/ui/Container";
 import Github from "@/components/GithubContribution/Github";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import SpotifyNowPlaying from "@/components/Spotify/SpotifyNowPlaying";
 
 export default function Home() {
   return (
@@ -19,6 +20,9 @@ export default function Home() {
         </AnimatedSection>
         <AnimatedSection delay={200}>
           <Socials />
+        </AnimatedSection>
+        <AnimatedSection delay={150}>
+          <SpotifyNowPlaying />
         </AnimatedSection>
         <AnimatedSection delay={100}>
           <Projects />

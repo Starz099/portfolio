@@ -11,6 +11,7 @@ const Avatar = () => {
           width={48}
           height={48}
           className="-z-10"
+          loading="eager"
         ></Image>
       </Link>
     </div>
