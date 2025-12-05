@@ -41,8 +41,8 @@ const projects = [
     description:
       "A decentralized platform that enables users to create custom Solana tokens.",
     video_asset: token_launchpad_demo,
-    github_link: "https://github.com/yourusername/project-one",
-    demo_link: "https://project-one-demo.vercel.app",
+    github_link: "https://github.com/starz099/token-launchpad",
+    demo_link: "https://token-launchpad-rho.vercel.app/",
     technologies: ["React", "JavaScript", "Solana_web3.js", "Tailwind CSS"],
   },
   {
