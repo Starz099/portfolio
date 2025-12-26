@@ -8,11 +8,11 @@ const Links = () => {
   const pathname = usePathname();
 
   return (
-    <div className="text-muted-foreground flex items-end gap-1">
+    <div className="text-muted-foreground flex items-end gap-0.5 text-xs sm:gap-0 sm:text-sm">
       <Avatar />
       <Link
         href="/projects"
-        className={`text-md hover:text-foreground relative ml-1 px-2 py-1 font-medium transition-all duration-200 ${
+        className={`hover:text-foreground relative ml-0.5 px-1 py-1 text-sm font-medium transition-all duration-200 sm:ml-1 sm:px-2 sm:text-base ${
           pathname === "/projects" ? "text-foreground" : ""
         }`}
       >
@@ -23,7 +23,7 @@ const Links = () => {
       </Link>
       <Link
         href="/work"
-        className={`text-md hover:text-foreground relative ml-1 px-2 py-1 font-medium transition-all duration-200 ${
+        className={`hover:text-foreground relative ml-0.5 px-1 py-1 text-sm font-medium transition-all duration-200 sm:ml-1 sm:px-2 sm:text-base ${
           pathname === "/work" ? "text-foreground" : ""
         }`}
       >
@@ -34,7 +34,7 @@ const Links = () => {
       </Link>
       <Link
         href="/contact"
-        className={`text-md hover:text-foreground relative ml-1 px-2 py-1 font-medium transition-all duration-200 ${
+        className={`hover:text-foreground relative ml-0.5 px-1 py-1 text-sm font-medium transition-all duration-200 sm:ml-1 sm:px-2 sm:text-base ${
           pathname === "/contact" ? "text-foreground" : ""
         }`}
       >

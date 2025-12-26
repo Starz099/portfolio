@@ -5,7 +5,8 @@ import ReactLenis from "lenis/react";
 import Navbar from "@/components/Navbar/navbar";
 import Footer from "@/components/Footer/Footer";
 import PageTransition from "@/components/ui/PageTransition";
-import BoomBot3D from "@/components/BoomBot3D";
+import BoomBotOverlayGate from "@/components/BoomBotOverlayGate";
+import { BoomBotProvider } from "@/components/boombot-provider";
 import SnowfallOverlay from "@/components/festive/snowfall-overlay";
 export const metadata: Metadata = {
   title: "Mayank",
@@ -27,18 +28,20 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SnowfallOverlay />
-          <ReactLenis root className="">
-            <BoomBot3D
-              modelPath="/boombot.glb"
-              depth={80}
-              speed={20}
-              showFloor={false}
-            />
-            <div className="background-gradient"></div>
-            <Navbar />
-            <PageTransition variant="blur-fade">{children}</PageTransition>
-            <Footer />
-          </ReactLenis>
+          <BoomBotProvider>
+            <ReactLenis root className="">
+              <BoomBotOverlayGate
+                modelPath="/boombot.glb"
+                depth={80}
+                speed={20}
+                showFloor={false}
+              />
+              <div className="background-gradient"></div>
+              <Navbar />
+              <PageTransition variant="blur-fade">{children}</PageTransition>
+              <Footer />
+            </ReactLenis>
+          </BoomBotProvider>
         </ThemeProvider>
       </body>
     </html>
