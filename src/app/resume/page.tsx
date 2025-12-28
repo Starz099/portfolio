@@ -16,7 +16,7 @@ export default function ResumePage() {
         <Separator />
         <div className="mx-auto max-w-full sm:max-w-2xl lg:max-w-4xl">
           <iframe
-            src="https://drive.google.com/file/d/1blE-JbpW1KUtdR7gj2TjfyB44YGtzkwQ/preview"
+            src={process.env.RESUME_LINK}
             className="min-h-screen w-full"
           ></iframe>
         </div>
