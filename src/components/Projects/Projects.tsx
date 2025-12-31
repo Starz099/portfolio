@@ -4,8 +4,27 @@ import writso_demo from "../../../videos/writso_demo.mp4.json";
 import hand_and_brain_demo from "../../../videos/hand_and_brain_demo.mp4.json";
 import token_launchpad_demo from "../../../videos/token_launchpad_demo.mp4.json";
 import second_brain_demo from "../../../videos/second_brain_demo.mp4.json";
+import leerio_demo from "../../../videos/leerio_demo.mp4.json";
 import TextReveal from "../ui/TextReveal";
 const projects = [
+  {
+    title: "Leerio",
+    description:
+      "AI-powered platform enabling conversational querying and summarisation of multi-page PDF documents using a Retrieval-Augmented Generation (RAG) pipeline.",
+    video_asset: leerio_demo,
+    github_link: "https://github.com/starz099/Leerio",
+    demo_link: "https://leerio.vercel.app/",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "LangChain",
+      "Grok API",
+      "MongoDB",
+      "Express.js",
+      "Pinecone",
+    ],
+  },
   {
     title: "Writso",
     description:

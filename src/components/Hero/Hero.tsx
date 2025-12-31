@@ -14,7 +14,7 @@ const Hero = () => {
           className="text-muted-foreground text-xl font-medium md:text-2xl"
           delay={300}
         >
-          A Full Stack Web Developer
+          A Software Engineer
         </TextReveal>
       </div>
     </div>

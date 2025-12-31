@@ -1,0 +1,23 @@
+{
+  "status": "ready",
+  "originalFilePath": "videos/leerio_demo.mp4",
+  "provider": "mux",
+  "providerMetadata": {
+    "mux": {
+      "uploadId": "1LUz7esgX6DJP1v101XjqvhkxZ8oUrxcuW02KGb00NmtPc",
+      "assetId": "CTMItGlbxVl1j02JLQG00G402ENuyvKz01jb7S71VibM36w",
+      "playbackId": "tI00LODq9Z0101RrRV2dc02shvfP88GOFVVor5mdS015iYXg"
+    }
+  },
+  "createdAt": 1767180593015,
+  "updatedAt": 1767180598490,
+  "size": 1373609,
+  "sources": [
+    {
+      "src": "https://stream.mux.com/tI00LODq9Z0101RrRV2dc02shvfP88GOFVVor5mdS015iYXg.m3u8",
+      "type": "application/x-mpegURL"
+    }
+  ],
+  "poster": "https://image.mux.com/tI00LODq9Z0101RrRV2dc02shvfP88GOFVVor5mdS015iYXg/thumbnail.webp",
+  "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwAgCdASoQAAgAAQAcJYwCdAEVV+961BCcYAD+/v8WhRz/LRFvdYPiqEI1idpz2joYMyp4iD4usYjVdz34cSnKnIDTvU1thvtKLcUDofdx2K+o6v7HnORtqXy49uAA"
+}

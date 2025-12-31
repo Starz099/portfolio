@@ -7,9 +7,12 @@ const Description = () => {
     <div className="flex flex-col gap-4 px-4">
       <CodedTodayBadge />
       <p className="text-muted-foreground max-w-2xl text-base leading-relaxed">
-        I create clean, thoughtful web applications that merge design and
-        performance, learning from every build and pushing my craft a little
-        further each time.
+        I build and ship reliable web applications, owning the entire execution
+        from concept to production.
+        <br />
+        <u className="underline underline-offset-2">Building</u> fast,{" "}
+        <u className="underline underline-offset-2">Failing</u> fast,{" "}
+        <u className="underline underline-offset-2">Learning</u> faster.
       </p>
       <div className="flex gap-3">
         <ResumeButton />
