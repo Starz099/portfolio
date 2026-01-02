@@ -273,6 +273,8 @@ export default function BoomBot3D({
     window.addEventListener("pointerup", handlePointerUp);
     return () => {
       window.removeEventListener("pointerup", handlePointerUp);
+      // Reset cursor on cleanup
+      document.body.style.cursor = "";
     };
   }, []);
 

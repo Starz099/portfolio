@@ -10,7 +10,8 @@ export function BoomBotToggleButton({
 }: {
   className?: string;
 }) {
-  const { enabled, toggle } = useBoomBot();
+  const { enabled, ready, toggle } = useBoomBot();
+  const visualEnabled = ready ? enabled : false;
 
   return (
     <Button
@@ -24,10 +25,11 @@ export function BoomBotToggleButton({
         className,
       )}
       onClick={toggle}
+      disabled={!ready}
       aria-label={
-        enabled ? "Disable BoomBot overlay" : "Enable BoomBot overlay"
+        visualEnabled ? "Disable BoomBot overlay" : "Enable BoomBot overlay"
       }
-      title={enabled ? "Disable BoomBot" : "Enable BoomBot"}
+      title={visualEnabled ? "Disable BoomBot" : "Enable BoomBot"}
     >
       <span className="sr-only">Toggle BoomBot overlay</span>
       <Image
@@ -37,7 +39,7 @@ export function BoomBotToggleButton({
         height={24}
         className={cn(
           "transition-opacity duration-300",
-          enabled ? "opacity-100" : "opacity-40",
+          visualEnabled ? "opacity-100" : "opacity-40",
         )}
       />
     </Button>

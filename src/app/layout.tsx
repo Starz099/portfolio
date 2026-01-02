@@ -9,7 +9,6 @@ import Footer from "@/components/Footer/Footer";
 import PageTransition from "@/components/ui/PageTransition";
 import BoomBotOverlayGate from "@/components/BoomBotOverlayGate";
 import { BoomBotProvider } from "@/components/boombot-provider";
-import SnowfallOverlay from "@/components/festive/snowfall-overlay";
 export const metadata: Metadata = {
   title: "Mayank",
   description: "Learning. Building. Sharing.",
@@ -31,7 +30,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SnowfallOverlay />
           <BoomBotProvider>
             <ReactLenis root className="">
               <BoomBotOverlayGate
