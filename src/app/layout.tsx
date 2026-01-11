@@ -12,6 +12,27 @@ import { BoomBotProvider } from "@/components/boombot-provider";
 export const metadata: Metadata = {
   title: "Mayank",
   description: "Learning. Building. Sharing.",
+  openGraph: {
+    title: "Mayank",
+    description: "Learning. Building. Sharing.",
+    url: "https://starzz.dev",
+    siteName: "Mayank",
+    images: [
+      {
+        url: "https://starzz.dev/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Mayank portfolio cover image",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mayank",
+    description: "Learning. Building. Sharing.",
+    images: ["https://starzz.dev/og.png"],
+  },
 };
 
 export default function RootLayout({
