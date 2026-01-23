@@ -7,7 +7,7 @@ const Avatar = () => {
       <Link href="/">
         <Image
           alt="profile avatar"
-          src="/images/profile.jpg"
+          src="/images/profile.png"
           width={48}
           height={48}
           className="-z-10"
