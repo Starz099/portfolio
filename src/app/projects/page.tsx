@@ -4,6 +4,7 @@ import hand_and_brain_demo from "../../../videos/hand_and_brain_demo.mp4.json";
 import token_launchpad_demo from "../../../videos/token_launchpad_demo.mp4.json";
 import second_brain_demo from "../../../videos/second_brain_demo.mp4.json";
 import leerio_demo from "../../../videos/leerio_demo.mp4.json";
+import dark_pdf_demo from "../../../videos/dark_pdf_demo.mp4.json";
 import Container from "@/components/ui/Container";
 import { Separator } from "@/components/ui/separator";
 
@@ -26,6 +27,14 @@ const ProjectsPage = () => {
         "Express.js",
         "Pinecone",
       ],
+    },
+    {
+      title: "Dark-pdf",
+      description: "Convert any pdf to dark mode with a single click.",
+      video_asset: dark_pdf_demo,
+      github_link: "https://github.com/Starz099/dark-pdf",
+      demo_link: "https://dark-pdf.starzz.dev/",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "PDF.js"],
     },
     {
       title: "Writso",
