@@ -5,6 +5,7 @@ import LinkedIn from "../svgs/LinkedIn";
 import Email from "../svgs/Email";
 import Magnetic from "../ui/Magnetic";
 import LeetCode from "../svgs/Leetcode";
+import Discord from "../svgs/Discord";
 
 const Socials = () => {
   return (
@@ -27,6 +28,16 @@ const Socials = () => {
           className="text-muted-foreground hover:text-foreground transform transition-colors duration-200 hover:scale-110"
         >
           <LeetCode className="" />
+        </Link>
+      </Magnetic>
+      <Magnetic>
+        <Link
+          href="https://discord.com/users/1226021151688626206"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-muted-foreground hover:text-foreground transform transition-colors duration-200 hover:scale-110"
+        >
+          <Discord className="" />
         </Link>
       </Magnetic>
       <Magnetic>
