@@ -45,7 +45,10 @@ const ProjectsCard = (props: ProjectsProps) => {
         {/* Details - Always visible */}
         <div className="space-y-4">
           {/* Description */}
-          <p className="text-muted-foreground text-sm leading-relaxed">
+          <p
+            className="text-muted-foreground text-sm leading-relaxed"
+            data-nosnippet
+          >
             {props.description}
           </p>
 

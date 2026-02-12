@@ -68,7 +68,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="px-4">
+    <div className="px-4" data-nosnippet>
       <TextReveal
         className="mb-8 text-3xl font-semibold tracking-tight"
         delay={100}

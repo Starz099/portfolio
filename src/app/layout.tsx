@@ -11,10 +11,12 @@ import BoomBotOverlayGate from "@/components/BoomBotOverlayGate";
 import { BoomBotProvider } from "@/components/boombot-provider";
 export const metadata: Metadata = {
   title: "Mayank",
-  description: "Learning. Building. Sharing.",
+  description:
+    "Software engineer open to work. I build and ship reliable web apps end-to-end from concept to production. Building fast, failing fast, learning faster.",
   openGraph: {
     title: "Mayank",
-    description: "Learning. Building. Sharing.",
+    description:
+      "Software engineer open to work. I build and ship reliable web apps end-to-end from concept to production. Building fast, failing fast, learning faster.",
     url: "https://starzz.dev",
     siteName: "Mayank",
     images: [
@@ -30,7 +32,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Mayank",
-    description: "Learning. Building. Sharing.",
+    description:
+      "Software engineer open to work. I build and ship reliable web apps end-to-end from concept to production. Building fast, failing fast, learning faster.",
     images: ["https://starzz.dev/og.png"],
   },
 };

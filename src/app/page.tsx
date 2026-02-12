@@ -7,6 +7,41 @@ import Container from "@/components/ui/Container";
 import Github from "@/components/GithubContribution/Github";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import SpotifyNowPlaying from "@/components/Spotify/SpotifyNowPlaying";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Mayank",
+  description:
+    "Software engineer open to work. I build and ship reliable web apps end-to-end from concept to production. Building fast, failing fast, learning faster.",
+  robots: {
+    index: true,
+    follow: true,
+    "max-snippet": 160,
+  },
+  openGraph: {
+    title: "Mayank",
+    description:
+      "Software engineer open to work. I build and ship reliable web apps end-to-end from concept to production. Building fast, failing fast, learning faster.",
+    url: "https://starzz.dev",
+    siteName: "Mayank",
+    images: [
+      {
+        url: "https://starzz.dev/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Mayank portfolio cover image",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mayank",
+    description:
+      "Software engineer open to work. I build and ship reliable web apps end-to-end from concept to production. Building fast, failing fast, learning faster.",
+    images: ["https://starzz.dev/og.png"],
+  },
+};
 
 export default function Home() {
   return (
