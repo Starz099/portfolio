@@ -46,14 +46,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`antialiased`}>
-        <Analytics />
-        <SpeedInsights />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
+          <Analytics />
+          <SpeedInsights />
           <BoomBotProvider>
             <ReactLenis root className="">
               <BoomBotOverlayGate

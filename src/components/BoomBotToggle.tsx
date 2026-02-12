@@ -2,9 +2,10 @@
 
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { useTheme } from "next-themes";
 import { Button } from "./ui/button";
 import { useBoomBot } from "./boombot-provider";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export function BoomBotToggleButton({
   className = "",
@@ -13,10 +14,23 @@ export function BoomBotToggleButton({
 }) {
   const { enabled, ready, toggle } = useBoomBot();
   const visualEnabled = ready ? enabled : false;
-  const { resolvedTheme } = useTheme();
-  const BoombotIconSrc =
-    resolvedTheme === "light" ? "/boombot_dark.png" : "/boombot.png";
+  const { theme, resolvedTheme } = useTheme();
+  const [boomBotIconSrc, setBoomBotIconSrc] = useState<
+    "/boombot_dark.png" | "/boombot.png"
+  >("/boombot_dark.png");
+  useEffect(() => {
+    const fn = () => {
+      if (resolvedTheme === "light") {
+        setBoomBotIconSrc("/boombot_dark.png");
+      } else if (resolvedTheme === "dark") {
+        setBoomBotIconSrc("/boombot.png");
+      } else {
+        return;
+      }
+    };
 
+    fn();
+  }, [theme, resolvedTheme, setBoomBotIconSrc]);
   return (
     <Button
       type="button"
@@ -37,7 +51,7 @@ export function BoomBotToggleButton({
     >
       <span className="sr-only">Toggle BoomBot overlay</span>
       <Image
-        src={BoombotIconSrc}
+        src={boomBotIconSrc}
         alt="BoomBot"
         width={28}
         height={28}
