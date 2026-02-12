@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 import { Button } from "./ui/button";
 import { useBoomBot } from "./boombot-provider";
 
@@ -12,6 +13,9 @@ export function BoomBotToggleButton({
 }) {
   const { enabled, ready, toggle } = useBoomBot();
   const visualEnabled = ready ? enabled : false;
+  const { resolvedTheme } = useTheme();
+  const BoombotIconSrc =
+    resolvedTheme === "light" ? "/boombot_dark.png" : "/boombot.png";
 
   return (
     <Button
@@ -33,10 +37,10 @@ export function BoomBotToggleButton({
     >
       <span className="sr-only">Toggle BoomBot overlay</span>
       <Image
-        src="/boombot.png"
+        src={BoombotIconSrc}
         alt="BoomBot"
-        width={24}
-        height={24}
+        width={28}
+        height={28}
         className={cn(
           "transition-opacity duration-300",
           visualEnabled ? "opacity-100" : "opacity-40",
