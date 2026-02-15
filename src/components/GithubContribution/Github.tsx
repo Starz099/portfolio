@@ -37,7 +37,7 @@ export default function Github() {
   const [totalContributions, setTotalContributions] = useState<number>(0);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   // Build exact 365-day rolling data (important for correct month order)
   function buildFullYearData(validContribs: ContributionItem[]) {
@@ -188,7 +188,7 @@ export default function Github() {
                 hideTotalCount
                 hideColorLegend={false}
                 hideMonthLabels={false}
-                colorScheme={theme === "dark" ? "dark" : "light"}
+                colorScheme={resolvedTheme === "dark" ? "dark" : "light"}
                 maxLevel={githubConfig.maxLevel}
                 theme={githubConfig.theme}
                 labels={{
