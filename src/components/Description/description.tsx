@@ -6,7 +6,7 @@ const Description = () => {
   return (
     <div className="flex flex-col gap-4 px-4">
       <CodedTodayBadge />
-      <p className="text-muted-foreground max-w-2xl text-base leading-relaxed">
+      <p className="font-hanken text-muted-foreground max-w-2xl text-lg leading-relaxed">
         I build and ship reliable web applications, owning the entire execution
         from concept to production.
         <br />

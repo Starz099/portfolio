@@ -8,7 +8,6 @@ import Github from "@/components/GithubContribution/Github";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import SpotifyNowPlaying from "@/components/Spotify/SpotifyNowPlaying";
 import type { Metadata } from "next";
-import VisitorCount from "@/components/VisitorCount/VisitorCount";
 
 export const metadata: Metadata = {
   title: "Mayank",
@@ -68,11 +67,6 @@ export default function Home() {
         </AnimatedSection>
         <AnimatedSection delay={100}>
           <Github />
-        </AnimatedSection>
-        <AnimatedSection delay={100}>
-          <div className="flex justify-center">
-            <VisitorCount />
-          </div>
         </AnimatedSection>
       </div>
     </Container>

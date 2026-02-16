@@ -1,6 +1,7 @@
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
+import { Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import ReactLenis from "lenis/react";
@@ -9,6 +10,12 @@ import Footer from "@/components/Footer/Footer";
 import PageTransition from "@/components/ui/PageTransition";
 import BoomBotOverlayGate from "@/components/BoomBotOverlayGate";
 import { BoomBotProvider } from "@/components/boombot-provider";
+
+const hankenGrotesk = Hanken_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-hanken-grotesk",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Mayank",
@@ -46,7 +53,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`antialiased`}>
+      <body className={`${hankenGrotesk.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

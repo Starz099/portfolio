@@ -10,6 +10,24 @@ type CountResponse = {
 export default function VisitorCount() {
   const [count, setCount] = useState<number | null>(null);
 
+  const formatOrdinal = (value: number) => {
+    const moduloTen = value % 10;
+    const moduloHundred = value % 100;
+    if (moduloHundred >= 11 && moduloHundred <= 13) {
+      return `${value}th`;
+    }
+    if (moduloTen === 1) {
+      return `${value}st`;
+    }
+    if (moduloTen === 2) {
+      return `${value}nd`;
+    }
+    if (moduloTen === 3) {
+      return `${value}rd`;
+    }
+    return `${value}th`;
+  };
+
   useEffect(() => {
     const controller = new AbortController();
 
@@ -52,10 +70,11 @@ export default function VisitorCount() {
   }, []);
 
   return (
-    <div className="bg-accent text-muted-foreground inline-flex items-center gap-2 rounded px-3 py-1.5 text-sm">
+    <div className="bg-accent text-muted-foreground mb-6 inline-flex items-center gap-2 rounded px-3 py-1.5 text-sm">
       <Eye className="h-4 w-4" />
-      <span>Unique visitors</span>
-      <span>{count === null ? "--" : count.toLocaleString()}</span>
+      <span>
+        You are the {count === null ? "--" : formatOrdinal(count)} visitor
+      </span>
     </div>
   );
 }

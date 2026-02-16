@@ -11,7 +11,7 @@ const Hero = () => {
           </span>
         </div>
         <TextReveal
-          className="text-muted-foreground text-xl font-medium md:text-2xl"
+          className="text-muted-foreground text-2xl font-medium md:text-3xl"
           delay={300}
         >
           A Software Engineer

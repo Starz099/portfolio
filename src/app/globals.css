@@ -199,6 +199,10 @@
     scroll-behavior: smooth;
   }
 
+  .font-hanken {
+    font-family: var(--font-hanken-grotesk), sans-serif;
+  }
+
   body {
     @apply bg-background text-foreground;
     letter-spacing: -0.01em;
