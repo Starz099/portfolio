@@ -9,6 +9,7 @@ import Footer from "@/components/Footer/Footer";
 import PageTransition from "@/components/ui/PageTransition";
 import BoomBotOverlayGate from "@/components/BoomBotOverlayGate";
 import { BoomBotProvider } from "@/components/boombot-provider";
+
 export const metadata: Metadata = {
   title: "Mayank",
   description:
@@ -66,6 +67,11 @@ export default function RootLayout({
               <Navbar />
               <PageTransition variant="blur-fade">{children}</PageTransition>
               <Footer />
+
+              <div
+                aria-hidden="true"
+                className="bg-background/30 pointer-events-none fixed inset-x-0 bottom-0 h-20 mask-[linear-gradient(to_top,black,transparent)] backdrop-blur-md"
+              ></div>
             </ReactLenis>
           </BoomBotProvider>
         </ThemeProvider>
