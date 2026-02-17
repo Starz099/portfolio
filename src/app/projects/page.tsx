@@ -1,91 +1,9 @@
 import ProjectsCard from "@/components/Projects/projects-card";
-import writso_demo from "../../../videos/writso_demo.mp4.json";
-import hand_and_brain_demo from "../../../videos/hand_and_brain_demo.mp4.json";
-import token_launchpad_demo from "../../../videos/token_launchpad_demo.mp4.json";
-import second_brain_demo from "../../../videos/second_brain_demo.mp4.json";
-import leerio_demo from "../../../videos/leerio_demo.mp4.json";
-import dark_pdf_demo from "../../../videos/dark_pdf_demo.mp4.json";
 import Container from "@/components/ui/Container";
 import { Separator } from "@/components/ui/separator";
+import { projects } from "@/data/projects";
 
 const ProjectsPage = () => {
-  const projects = [
-    {
-      title: "Leerio",
-      description:
-        "AI-powered platform enabling conversational querying and summarisation of multi-page PDF documents using a Retrieval-Augmented Generation (RAG) pipeline.",
-      video_asset: leerio_demo,
-      github_link: "https://github.com/starz099/Leerio",
-      demo_link: "https://leerio.vercel.app/",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "LangChain",
-        "Grok API",
-        "MongoDB",
-        "Express.js",
-        "Pinecone",
-      ],
-    },
-    {
-      title: "Dark-pdf",
-      description: "Convert any pdf to dark mode with a single click.",
-      video_asset: dark_pdf_demo,
-      github_link: "https://github.com/Starz099/dark-pdf",
-      demo_link: "https://dark-pdf.starzz.dev/",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "PDF.js"],
-    },
-    {
-      title: "Writso",
-      description:
-        "A writing practice web app that helps users improve their writing skills through daily prompts, AI reviews, progress tracking, and community feedback.",
-      video_asset: writso_demo,
-      github_link: "https://github.com/Starz099/writso",
-      demo_link: "https://writso.vercel.app",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "PostgreSQL",
-        "Prisma",
-      ],
-    },
-    {
-      title: "Hand and Brain Chess",
-      description:
-        "An online platform for playing Hand and Brain Chess, allowing users to team up and enjoy this unique chess variant with real-time gameplay.",
-      video_asset: hand_and_brain_demo, // Replace with actual video asset
-      github_link: "https://github.com/Starz099/chess",
-      demo_link: "https://chess-nu-seven.vercel.app/",
-      technologies: [
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Socket.io",
-        "Node.js",
-      ],
-    },
-    {
-      title: "Token-Launchpad",
-      description:
-        "A decentralized platform that enables users to create custom Solana tokens.",
-      video_asset: token_launchpad_demo,
-      github_link: "https://github.com/starz099/token-launchpad",
-      demo_link: "https://token-launchpad-rho.vercel.app/",
-      technologies: ["React", "JavaScript", "Solana_web3.js", "Tailwind CSS"],
-    },
-    {
-      title: "Second Brain",
-      description:
-        "Personal knowledge management tool for saving, organising, and sharing notes/links.",
-      video_asset: second_brain_demo, // Replace with actual video asset
-      github_link: "https://github.com/Starz099/second-brain",
-      demo_link: "https://second-brain-sage.vercel.app/",
-      technologies: ["Node.js", "Express", "MongoDB", "React"],
-    },
-  ];
-
   return (
     <Container className="px-4 py-16 sm:px-6 md:px-8">
       <div className="space-y-8">

@@ -1,37 +1,43 @@
-"use client";
-
-import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import NextVideo from "next-video";
 
 interface ProjectsProps {
+  id: string;
   title: string;
   description: string;
-  video_asset: any; // NextVideo asset from imported JSON
+  thumbnail: {
+    src: string;
+    alt: string;
+    aspectRatio: string;
+  };
   github_link: string;
   demo_link: string;
   technologies: string[];
 }
 
 const ProjectsCard = (props: ProjectsProps) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
-    <div
-      className={`group border-border/50 bg-card relative flex flex-col overflow-hidden rounded-xl border transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.01] ${isHovered ? "border-border shadow-lg" : "shadow-sm"} `}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      {/* Video Section */}
-      <div className="relative aspect-video w-full overflow-hidden">
-        <div className="bg-muted/30 absolute inset-0 transition-colors duration-300 group-hover:bg-transparent" />
-        <NextVideo
-          src={props.video_asset}
-          controls={false}
-          loop
-          muted
-          autoPlay={isHovered}
-          key={isHovered ? "playing" : "paused"}
+    <div className="group border-border/50 bg-card hover:border-border relative flex flex-col overflow-hidden rounded-xl border shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.01] hover:shadow-lg">
+      {/* Clickable overlay to navigate to project detail */}
+      <Link
+        href={`/projects/${props.id}`}
+        className="absolute inset-0 z-10"
+        aria-label={`View ${props.title} details`}
+      >
+        <span className="sr-only">View {props.title} details</span>
+      </Link>
+      {/* Thumbnail Section */}
+      <div
+        className="relative w-full overflow-hidden"
+        style={{ aspectRatio: props.thumbnail.aspectRatio }}
+      >
+        <div className="from-muted/60 via-muted/30 to-muted/10 group-hover:from-muted/70 group-hover:via-muted/40 absolute inset-0 bg-linear-to-br transition-colors duration-300" />
+        <Image
+          src={props.thumbnail.src}
+          alt={props.thumbnail.alt}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover"
         />
       </div>
 
@@ -72,14 +78,13 @@ const ProjectsCard = (props: ProjectsProps) => {
       </div>
 
       {/* Links - Fixed at bottom */}
-      <div className="mt-auto flex gap-3 p-6 pt-0">
+      <div className="relative z-20 mt-auto flex gap-3 p-6 pt-0">
         {props.github_link && (
           <Link
             href={props.github_link}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 hover:shadow-md"
-            onClick={(e) => e.stopPropagation()}
           >
             GitHub
           </Link>
@@ -90,7 +95,6 @@ const ProjectsCard = (props: ProjectsProps) => {
             target="_blank"
             rel="noopener noreferrer"
             className="border-border bg-card hover:bg-accent text-foreground rounded-lg border px-4 py-2 text-sm font-medium transition-all duration-200 hover:shadow-md"
-            onClick={(e) => e.stopPropagation()}
           >
             Live Demo
           </Link>
