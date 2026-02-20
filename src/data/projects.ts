@@ -37,6 +37,28 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "kestro",
+    title: "Kestro",
+    description:
+      "Platform to practice typing speed for code, not just text. Helps developers build muscle memory for syntax using a smooth editor powered by Monaco Editor.",
+    thumbnail: {
+      src: "/images/projects/kestro.png",
+      alt: "Kestro project thumbnail",
+      aspectRatio: "16 / 9",
+    },
+    github_link: "https://github.com/Starz099/Kestro",
+    demo_link: "https://kestro.starzz.dev/",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Monaco Editor",
+      "Prisma",
+      "PostgreSQL",
+      "Clerk",
+    ],
+  },
+  {
     id: "dark-pdf",
     title: "Dark-pdf",
     description: "Convert any pdf to dark mode with a single click.",
@@ -48,26 +70,6 @@ export const projects: Project[] = [
     github_link: "https://github.com/Starz099/dark-pdf",
     demo_link: "https://dark-pdf.starzz.dev/",
     technologies: ["React", "TypeScript", "Tailwind CSS", "PDF.js"],
-  },
-  {
-    id: "writso",
-    title: "Writso",
-    description:
-      "A writing practice web app that helps users improve their writing skills through daily prompts, AI reviews, progress tracking, and community feedback.",
-    thumbnail: {
-      src: "/images/projects/writso.png",
-      alt: "Writso project thumbnail",
-      aspectRatio: "16 / 9",
-    },
-    github_link: "https://github.com/Starz099/writso",
-    demo_link: "https://writso.vercel.app",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "PostgreSQL",
-      "Prisma",
-    ],
   },
   {
     id: "hand-and-brain-chess",
@@ -87,6 +89,46 @@ export const projects: Project[] = [
       "Tailwind CSS",
       "Socket.io",
       "Node.js",
+    ],
+  },
+  {
+    id: "whiff.gg",
+    title: "Whiff.gg",
+    description:
+      "A fun web app where users enter their Valorant ID, get their stats scraped from Valorant Tracker, and receive an AI-generated roast based on their performance.",
+    thumbnail: {
+      src: "/images/projects/whiff-gg.png",
+      alt: "Whiff.gg project thumbnail",
+      aspectRatio: "16 / 9",
+    },
+    github_link: "https://github.com/Starz099/whiff.gg",
+    demo_link: "",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Puppeteer",
+      "Azure-rest/ai-inference",
+    ],
+  },
+  {
+    id: "writso",
+    title: "Writso",
+    description:
+      "A writing practice web app that helps users improve their writing skills through daily prompts, AI reviews, progress tracking, and community feedback.",
+    thumbnail: {
+      src: "/images/projects/writso.png",
+      alt: "Writso project thumbnail",
+      aspectRatio: "16 / 9",
+    },
+    github_link: "https://github.com/Starz099/writso",
+    demo_link: "https://writso.vercel.app",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Prisma",
     ],
   },
   {
