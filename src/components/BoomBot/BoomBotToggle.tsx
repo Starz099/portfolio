@@ -2,7 +2,6 @@
 
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { Button } from "./ui/button";
 import { useBoomBot } from "./boombot-provider";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
@@ -32,14 +31,12 @@ export function BoomBotToggleButton({
     fn();
   }, [theme, resolvedTheme, setBoomBotIconSrc]);
   return (
-    <Button
+    <button
       type="button"
-      variant="ghost"
-      size="icon"
       className={cn(
-        "size-10 cursor-pointer p-0 transition-all duration-300 active:scale-95",
-        "border-border/60 hover:border-border rounded-2xl border-2",
-        "hover:scale-95 hover:shadow-sm",
+        "inline-flex size-10 cursor-pointer items-center justify-center p-0 transition-all duration-300 active:scale-95",
+        "border-border/60 hover:border-border rounded-2xl border-2 bg-transparent",
+        "hover:scale-95 hover:shadow-sm disabled:cursor-not-allowed disabled:opacity-50",
         className,
       )}
       onClick={toggle}
@@ -60,6 +57,6 @@ export function BoomBotToggleButton({
           visualEnabled ? "opacity-100" : "opacity-40",
         )}
       />
-    </Button>
+    </button>
   );
 }

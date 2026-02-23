@@ -8,8 +8,8 @@ import ReactLenis from "lenis/react";
 import Navbar from "@/components/Navbar/navbar";
 import Footer from "@/components/Footer/Footer";
 import PageTransition from "@/components/ui/PageTransition";
-import BoomBotOverlayGate from "@/components/BoomBotOverlayGate";
-import { BoomBotProvider } from "@/components/boombot-provider";
+import BoomBotOverlayGate from "@/components/BoomBot/BoomBotOverlayGate";
+import { BoomBotProvider } from "@/components/BoomBot/boombot-provider";
 
 const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"],
@@ -65,6 +65,7 @@ export default function RootLayout({
           <BoomBotProvider>
             <ReactLenis root className="">
               <BoomBotOverlayGate
+                lightingPreset="studio"
                 modelPath="/boombot.glb"
                 depth={80}
                 speed={20}

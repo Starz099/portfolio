@@ -43,6 +43,17 @@ const Links = () => {
           <span className="bg-accent/10 absolute inset-0 rounded-md" />
         )}
       </Link>
+      <Link
+        href="components/boombot"
+        className={`hover:text-foreground relative ml-0.5 px-1 py-1 text-sm font-medium transition-all duration-200 sm:ml-1 sm:px-2 sm:text-base ${
+          pathname === "components/boombot" ? "text-foreground" : ""
+        }`}
+      >
+        <span className="relative z-10">Components</span>
+        {pathname === "components/boombot" && (
+          <span className="bg-accent/10 absolute inset-0 rounded-md" />
+        )}
+      </Link>
     </div>
   );
 };

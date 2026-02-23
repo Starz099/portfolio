@@ -1,1 +1,23 @@
-{"status":"ready","originalFilePath":"videos/whiff_gg_demo.mp4","provider":"mux","providerMetadata":{"mux":{"uploadId":"VWdU8RWJCqG00j8PDvewawyXIm8u00lLtkHV3009pBE17o","assetId":"01vyf8yThkxBV7InnNSdwmk4qKfbTZMBKJaFdHMTrhtk","playbackId":"1MjB4i8Uuq8e1BOTzkl1SxdA67uj1LUf8EzftH287l4"}},"createdAt":1771614681770,"updatedAt":1771614690221,"size":7762048,"sources":[{"src":"https://stream.mux.com/1MjB4i8Uuq8e1BOTzkl1SxdA67uj1LUf8EzftH287l4.m3u8","type":"application/x-mpegURL"}],"poster":"https://image.mux.com/1MjB4i8Uuq8e1BOTzkl1SxdA67uj1LUf8EzftH287l4/thumbnail.webp","blurDataURL":"data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAAkAAQAcJQBOgCKq/ESNoAD+/uvwBGL9pe6XUVCdyRYJMq1jomgEMgSsQZm0r2h8YnaW9gSQyhpQZiM7Ato9VHHTJRBHmf3YppmldygAAA=="}
+{
+  "status": "ready",
+  "originalFilePath": "videos/whiff_gg_demo.mp4",
+  "provider": "mux",
+  "providerMetadata": {
+    "mux": {
+      "uploadId": "VWdU8RWJCqG00j8PDvewawyXIm8u00lLtkHV3009pBE17o",
+      "assetId": "01vyf8yThkxBV7InnNSdwmk4qKfbTZMBKJaFdHMTrhtk",
+      "playbackId": "1MjB4i8Uuq8e1BOTzkl1SxdA67uj1LUf8EzftH287l4"
+    }
+  },
+  "createdAt": 1771614681770,
+  "updatedAt": 1771614690221,
+  "size": 7762048,
+  "sources": [
+    {
+      "src": "https://stream.mux.com/1MjB4i8Uuq8e1BOTzkl1SxdA67uj1LUf8EzftH287l4.m3u8",
+      "type": "application/x-mpegURL"
+    }
+  ],
+  "poster": "https://image.mux.com/1MjB4i8Uuq8e1BOTzkl1SxdA67uj1LUf8EzftH287l4/thumbnail.webp",
+  "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAAkAAQAcJQBOgCKq/ESNoAD+/uvwBGL9pe6XUVCdyRYJMq1jomgEMgSsQZm0r2h8YnaW9gSQyhpQZiM7Ato9VHHTJRBHmf3YppmldygAAA=="
+}

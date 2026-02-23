@@ -8,6 +8,13 @@ import * as THREE from "three";
 
 // ==================== TYPES ====================
 
+export type LightingPreset =
+  | "default"
+  | "studio"
+  | "sunset"
+  | "neon"
+  | "spotlight";
+
 interface BoomBot3DProps {
   /** Path to GLB/GLTF model file */
   modelPath: string;
@@ -25,6 +32,10 @@ interface BoomBot3DProps {
   showFloor?: boolean;
   /** Scale of the 3D model */
   modelScale?: number;
+  /** Lighting environment preset */
+  lightingPreset?: LightingPreset;
+  /** Size of the ground plane and grid (used when showFloor is true) */
+  floorSize?: number;
 }
 
 interface BoomBotModelProps {
@@ -149,7 +160,7 @@ function BoomBotController({
 
       // Rotate to face movement direction
       const targetAngle = Math.atan2(direction.x, direction.z);
-      let currentAngle = bot.current.rotation.y;
+      const currentAngle = bot.current.rotation.y;
 
       // Normalize angle difference to shortest path
       let angleDiff = targetAngle - currentAngle;
@@ -231,6 +242,81 @@ function CameraController({
   return null;
 }
 
+// ==================== LIGHTING PRESETS ====================
+
+function LightingSetup({ preset }: { preset: LightingPreset }) {
+  switch (preset) {
+    case "studio":
+      return (
+        <>
+          <ambientLight intensity={1.0} />
+          <directionalLight
+            position={[5, 10, 5]}
+            intensity={1.2}
+            castShadow
+            shadow-mapSize-width={1024}
+            shadow-mapSize-height={1024}
+          />
+          <directionalLight position={[-5, 8, -3]} intensity={0.8} />
+        </>
+      );
+    case "sunset":
+      return (
+        <>
+          <ambientLight intensity={0.3} color="#ffd4a6" />
+          <directionalLight
+            position={[8, 4, 2]}
+            intensity={2.0}
+            color="#ff8c42"
+            castShadow
+            shadow-mapSize-width={1024}
+            shadow-mapSize-height={1024}
+          />
+          <pointLight position={[-5, 3, -5]} intensity={0.3} color="#ff6b6b" />
+        </>
+      );
+    case "neon":
+      return (
+        <>
+          <ambientLight intensity={0.15} />
+          <pointLight position={[5, 5, 5]} intensity={1.5} color="#ff69b4" />
+          <pointLight position={[-5, 5, -5]} intensity={1.5} color="#00ffff" />
+          <pointLight position={[0, 8, 0]} intensity={0.5} color="#ffffff" />
+        </>
+      );
+    case "spotlight":
+      return (
+        <>
+          <ambientLight intensity={0.1} />
+          <spotLight
+            position={[0, 15, 0]}
+            angle={0.4}
+            penumbra={0.5}
+            intensity={3.0}
+            castShadow
+            shadow-mapSize-width={1024}
+            shadow-mapSize-height={1024}
+          />
+        </>
+      );
+    case "default":
+    default:
+      return (
+        <>
+          <ambientLight intensity={0.6} />
+          <directionalLight
+            position={[5, 10, 5]}
+            intensity={1.5}
+            castShadow
+            shadow-mapSize-width={1024}
+            shadow-mapSize-height={1024}
+          />
+          <pointLight position={[-5, 5, -5]} intensity={0.4} />
+        </>
+      );
+  }
+}
+
 // ==================== MAIN COMPONENT ====================
 
 /**
@@ -244,6 +330,7 @@ function CameraController({
  *   depth={10}
  *   speed={5}
  *   showFloor={false}
+ *   lightingPreset="default"
  * />
  * ```
  */
@@ -256,6 +343,8 @@ export default function BoomBot3D({
   zIndex = 9999,
   showFloor = false,
   modelScale = 1.3,
+  lightingPreset = "default",
+  floorSize = 50,
 }: BoomBot3DProps) {
   const isDraggingBot = useRef(false);
 
@@ -301,15 +390,7 @@ export default function BoomBot3D({
         gl={{ alpha: true }}
       >
         {/* Lighting setup */}
-        <ambientLight intensity={0.6} />
-        <directionalLight
-          position={[5, 10, 5]}
-          intensity={1.5}
-          castShadow
-          shadow-mapSize-width={1024}
-          shadow-mapSize-height={1024}
-        />
-        <pointLight position={[-5, 5, -5]} intensity={0.4} />
+        <LightingSetup preset={lightingPreset} />
 
         {/* Bot controller */}
         <BoomBotController
@@ -335,7 +416,7 @@ export default function BoomBot3D({
               position={[0, -0.01, 0]}
               receiveShadow
             >
-              <planeGeometry args={[50, 50]} />
+              <planeGeometry args={[floorSize, floorSize]} />
               <meshStandardMaterial
                 color="#1a1a2e"
                 transparent
@@ -345,7 +426,7 @@ export default function BoomBot3D({
             </mesh>
 
             <gridHelper
-              args={[50, 50, "#4a5568", "#2d3748"]}
+              args={[floorSize, floorSize, "#4a5568", "#2d3748"]}
               position={[0, 0, 0]}
             />
           </>

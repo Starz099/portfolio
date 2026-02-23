@@ -1,6 +1,6 @@
 import Container from "../ui/Container";
 import { ThemeToggleButton } from "../ThemeSwitch";
-import { BoomBotToggleButton } from "../BoomBotToggle";
+import { BoomBotToggleButton } from "../BoomBot/BoomBotToggle";
 import Links from "./links";
 
 const Navbar = () => {

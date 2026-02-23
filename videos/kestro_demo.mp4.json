@@ -1,1 +1,23 @@
-{"status":"ready","originalFilePath":"videos/kestro_demo.mp4","provider":"mux","providerMetadata":{"mux":{"uploadId":"ibdLPpG8oTX3T9lKfGCfJxMOsnJ00ilOD7wXqKhrtIsY","assetId":"koiPkhu2A5nJBwJybiDkG1vZu1OQC02lW6CxKAKSSfNo","playbackId":"i2nM3Y3NWY5Vie019QBXALFF4zLAAEG300rXNr01PFwKy4"}},"createdAt":1771612177446,"updatedAt":1771612184684,"size":7744091,"sources":[{"src":"https://stream.mux.com/i2nM3Y3NWY5Vie019QBXALFF4zLAAEG300rXNr01PFwKy4.m3u8","type":"application/x-mpegURL"}],"poster":"https://image.mux.com/i2nM3Y3NWY5Vie019QBXALFF4zLAAEG300rXNr01PFwKy4/thumbnail.webp","blurDataURL":"data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAQCdASoQAAgAAQAcJQBOgCHw+uqEJJAA/v32f7+6p8xXmqFrk/pyXVgTQIFE7HzBctcjE3d7YLk4r31JKZxW47pq471Rk7OSqZoncBwsfHzc7W6sx4XkycAAAA=="}
+{
+  "status": "ready",
+  "originalFilePath": "videos/kestro_demo.mp4",
+  "provider": "mux",
+  "providerMetadata": {
+    "mux": {
+      "uploadId": "ibdLPpG8oTX3T9lKfGCfJxMOsnJ00ilOD7wXqKhrtIsY",
+      "assetId": "koiPkhu2A5nJBwJybiDkG1vZu1OQC02lW6CxKAKSSfNo",
+      "playbackId": "i2nM3Y3NWY5Vie019QBXALFF4zLAAEG300rXNr01PFwKy4"
+    }
+  },
+  "createdAt": 1771612177446,
+  "updatedAt": 1771612184684,
+  "size": 7744091,
+  "sources": [
+    {
+      "src": "https://stream.mux.com/i2nM3Y3NWY5Vie019QBXALFF4zLAAEG300rXNr01PFwKy4.m3u8",
+      "type": "application/x-mpegURL"
+    }
+  ],
+  "poster": "https://image.mux.com/i2nM3Y3NWY5Vie019QBXALFF4zLAAEG300rXNr01PFwKy4/thumbnail.webp",
+  "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAQCdASoQAAgAAQAcJQBOgCHw+uqEJJAA/v32f7+6p8xXmqFrk/pyXVgTQIFE7HzBctcjE3d7YLk4r31JKZxW47pq471Rk7OSqZoncBwsfHzc7W6sx4XkycAAAA=="
+}
