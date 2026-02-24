@@ -1,0 +1,23 @@
+{
+  "status": "ready",
+  "originalFilePath": "videos/boombot_demo.mp4",
+  "provider": "mux",
+  "providerMetadata": {
+    "mux": {
+      "uploadId": "005HFoAeNQpl2yOx7GWWfjP2wqxE0083EqQ7zwy9RoSDQ",
+      "assetId": "zHb200PG601kkQ94r02BsavGIkS8389h8Vn6jaZ01i1jPaE",
+      "playbackId": "FvD3g3Mec1BjSt301yRV417cPMgdk01JigS6P02vlpnBdA"
+    }
+  },
+  "createdAt": 1771924013247,
+  "updatedAt": 1771924029725,
+  "size": 21395738,
+  "sources": [
+    {
+      "src": "https://stream.mux.com/FvD3g3Mec1BjSt301yRV417cPMgdk01JigS6P02vlpnBdA.m3u8",
+      "type": "application/x-mpegURL"
+    }
+  ],
+  "poster": "https://image.mux.com/FvD3g3Mec1BjSt301yRV417cPMgdk01JigS6P02vlpnBdA/thumbnail.webp",
+  "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwAgCdASoQAAkAAQAcJaACdH8AGCb5K1PkgAD+/sEkzsMAHRj68frq2ZmDB8zjZeVqhAk11GrxRHF4NFdoeA0qRvMfyC3irne+2HgdMnHYjXYijtlpSJ7ZAAA="
+}

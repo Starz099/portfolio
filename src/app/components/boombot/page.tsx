@@ -5,7 +5,8 @@ import { Download } from "lucide-react";
 import { PROPS_REFERENCE } from "./data";
 import { PackageTabs } from "@/components/ui/PackageTabs";
 import { CodeBlock } from "@/components/ui/CodeBlock";
-
+import NextVideo from "next-video";
+import boombot_demo from "../../../../videos/boombot_demo.mp4.json";
 export default function BoomBotPage() {
   return (
     <Container className="px-4 py-16 sm:px-6 md:px-8">
@@ -42,6 +43,18 @@ export default function BoomBotPage() {
           </p>
         </section>
 
+        <Separator />
+        <div className="border-border/50 bg-card relative mb-8 overflow-hidden rounded-xl border shadow-sm">
+          <div className="relative aspect-video w-full overflow-hidden">
+            <NextVideo
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              src={boombot_demo as any}
+              controls={true}
+              loop
+              muted
+            />
+          </div>
+        </div>
         <Separator />
 
         {/* ── Integration Steps ───────────────────────────────── */}
