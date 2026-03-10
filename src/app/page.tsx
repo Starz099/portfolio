@@ -6,7 +6,7 @@ import Socials from "@/components/Socials/Socials";
 import Container from "@/components/ui/Container";
 import Github from "@/components/GithubContribution/Github";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import SpotifyNowPlaying from "@/components/Spotify/SpotifyNowPlaying";
+// import SpotifyNowPlaying from "@/components/Spotify/SpotifyNowPlaying";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -56,9 +56,9 @@ export default function Home() {
         <AnimatedSection delay={200}>
           <Socials />
         </AnimatedSection>
-        <AnimatedSection delay={150}>
+        {/* <AnimatedSection delay={150}>
           <SpotifyNowPlaying />
-        </AnimatedSection>
+        </AnimatedSection> */}
         <AnimatedSection delay={100}>
           <Projects />
         </AnimatedSection>
