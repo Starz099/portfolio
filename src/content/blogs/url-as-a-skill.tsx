@@ -209,7 +209,6 @@ npmjs.com/package/tailwindcss`}</code>
               <HighlightPath path="/users" />
               <HighlightPath path="/repos" />
               <HighlightPath path="/issues" />
-              <span>and</span>
               <HighlightPath path="/settings" />
             </span>
             .
@@ -245,7 +244,6 @@ npmjs.com/package/tailwindcss`}</code>
               <HighlightPath path="/settings" />
               <HighlightPath path="/docs" />
               <HighlightPath path="/api" />
-              <span>and</span>
               <HighlightPath path="/admin" />
             </span>
             .

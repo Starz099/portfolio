@@ -1,6 +1,7 @@
 import Description from "@/components/Description/description";
 import Hero from "@/components/Hero/Hero";
 import Projects from "@/components/Projects/Projects";
+import Blogs from "@/components/Blogs/Blogs";
 import Skills from "@/components/Skills/Skills";
 import Socials from "@/components/Socials/Socials";
 import Container from "@/components/ui/Container";
@@ -61,6 +62,9 @@ export default function Home() {
         </AnimatedSection> */}
         <AnimatedSection delay={100}>
           <Projects />
+        </AnimatedSection>
+        <AnimatedSection delay={100}>
+          <Blogs />
         </AnimatedSection>
         <AnimatedSection delay={100}>
           <Skills />
