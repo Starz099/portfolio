@@ -1,0 +1,23 @@
+{
+  "status": "ready",
+  "originalFilePath": "videos/tura_demo.mp4",
+  "provider": "mux",
+  "providerMetadata": {
+    "mux": {
+      "uploadId": "00oQSZgwj4ZmfkBCwhV5P1lXYB82hRa01shyBM69EbOAE",
+      "assetId": "oufYjma643uFjEVLtVhLrHyWm8CYvIrgBWgAP201IWO00",
+      "playbackId": "vE7iWeax4JgFQgPdplvkowJlUNRaFhTKzl1pK3r1isg"
+    }
+  },
+  "createdAt": 1774178886573,
+  "updatedAt": 1774178893208,
+  "size": 2287654,
+  "sources": [
+    {
+      "src": "https://stream.mux.com/vE7iWeax4JgFQgPdplvkowJlUNRaFhTKzl1pK3r1isg.m3u8",
+      "type": "application/x-mpegURL"
+    }
+  ],
+  "poster": "https://image.mux.com/vE7iWeax4JgFQgPdplvkowJlUNRaFhTKzl1pK3r1isg/thumbnail.webp",
+  "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwAgCdASoQAAkAAQAcJYwCdDXAAWbbJCyK4AD+/no3lfJ/47ERAe9hseR0xIVodsfXK33MZDM8NvAnyhD0yY/59Vjz5Mn+TfW/GK7l4V6H76eYrwgb3+XIZiEg/N/S6ciPAAAA"
+}

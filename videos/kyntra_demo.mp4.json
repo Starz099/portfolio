@@ -1,0 +1,23 @@
+{
+  "status": "ready",
+  "originalFilePath": "videos/kyntra_demo.mp4",
+  "provider": "mux",
+  "providerMetadata": {
+    "mux": {
+      "uploadId": "zgrpB4cjumjMy01lGS0102RUcn6mNTDEuPCtfqU5nkEhI00",
+      "assetId": "RcNMUR1Fp7QTY6NtXAyHiXxU8qcwQO02cF02miGfo2wx4",
+      "playbackId": "2W94wPYGSOLUv4yyxtR01gsbbdHWK6KUyE2ZArF89iCg"
+    }
+  },
+  "createdAt": 1774179991714,
+  "updatedAt": 1774179998438,
+  "size": 3373818,
+  "sources": [
+    {
+      "src": "https://stream.mux.com/2W94wPYGSOLUv4yyxtR01gsbbdHWK6KUyE2ZArF89iCg.m3u8",
+      "type": "application/x-mpegURL"
+    }
+  ],
+  "poster": "https://image.mux.com/2W94wPYGSOLUv4yyxtR01gsbbdHWK6KUyE2ZArF89iCg/thumbnail.webp",
+  "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQAAkAAQAcJbACdH8AGCb8jqOdAAD+/iM0bT7Ih8zRIJgNd1va7nZBHarSkHaliv3ax7/ErAKldVzpNfrd3iFAw0xE3FvIZzP66hTeSXPBK9Rmr0SAAA=="
+}
