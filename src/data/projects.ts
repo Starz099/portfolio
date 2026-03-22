@@ -60,19 +60,7 @@ export const projects: Project[] = [
       "Clerk",
     ],
   },
-  {
-    id: "dark-pdf",
-    title: "Dark-pdf",
-    description: "Convert any pdf to dark mode with a single click.",
-    thumbnail: {
-      src: "/images/projects/dark-pdf.png",
-      alt: "Dark-pdf project thumbnail",
-      aspectRatio: "16 / 9",
-    },
-    github_link: "https://github.com/Starz099/dark-pdf",
-    demo_link: "https://dark-pdf.starzz.dev/",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "PDF.js"],
-  },
+
   {
     id: "hand-and-brain-chess",
     title: "Hand and Brain Chess",
@@ -91,6 +79,62 @@ export const projects: Project[] = [
       "Tailwind CSS",
       "Socket.io",
       "Node.js",
+    ],
+  },
+  {
+    id: "dark-pdf",
+    title: "Dark-pdf",
+    description: "Convert any pdf to dark mode with a single click.",
+    thumbnail: {
+      src: "/images/projects/dark-pdf.png",
+      alt: "Dark-pdf project thumbnail",
+      aspectRatio: "16 / 9",
+    },
+    github_link: "https://github.com/Starz099/dark-pdf",
+    demo_link: "https://dark-pdf.starzz.dev/",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "PDF.js"],
+  },
+  {
+    id: "tura",
+    title: "Tura",
+    description:
+      "A blazing-fast, file transfer CLI written in Rust. Using 4 parallel TCP streams, async Tokio I/O, and ChaCha20-Poly1305 End-to-End Encryption.",
+    thumbnail: {
+      src: "/images/projects/tura.png",
+      alt: "Tura CLI project thumbnail",
+      aspectRatio: "16 / 9",
+    },
+    github_link: "https://github.com/Starz099/tura",
+    demo_link: "",
+    technologies: [
+      "rust",
+      "clap",
+      "rumqttc",
+      "tokio",
+      "stun",
+      "blake3",
+      "chacha20poly1305",
+    ],
+  },
+  {
+    id: "kyntra",
+    title: "Kyntra",
+    description:
+      "AI-powered CLI for smarter commits, better branch naming, and quick repo understanding, all from the terminal.",
+    thumbnail: {
+      src: "/images/projects/kyntra.png",
+      alt: "Kyntra CLI project thumbnail",
+      aspectRatio: "16 / 9",
+    },
+    github_link: "https://github.com/Starz099/kyntra",
+    demo_link: "https://kyntra.starzz.dev",
+    technologies: [
+      "Node.js",
+      "TypeScript",
+      "Commander.js",
+      "Inquirer",
+      "Chalk",
+      "simple-git",
     ],
   },
   {
