@@ -5,7 +5,7 @@ import { ThemeToggleButton } from "../ThemeSwitch";
 import { BoomBotToggleButton } from "../BoomBot/BoomBotToggle";
 import Links from "./links";
 import { linkItems } from "./constants";
-import Avatar from "../Avatar";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -19,7 +19,6 @@ const Navbar = () => {
     <Container className="bg-background/80 border-border/40 sticky top-0 z-20 border-b backdrop-blur-md transition-all duration-200">
       <div className="flex items-center justify-between px-3 py-2 sm:px-6 sm:py-4">
         <div className="flex items-end gap-2 sm:gap-4">
-          <Avatar />
           <Links className="hidden translate-y-1 sm:flex" />
         </div>
         <div className="flex items-center gap-2 sm:gap-4">
