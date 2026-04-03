@@ -10,7 +10,8 @@
 
 import { ComponentType } from "react";
 import UrlAsASkill from "./url-as-a-skill";
-
+import MakingTura from "./making-tura";
 export const blogRegistry: Record<string, ComponentType> = {
   "url-as-a-skill": UrlAsASkill,
+  "making-tura": MakingTura,
 };
