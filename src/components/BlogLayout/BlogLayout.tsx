@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowLeft, CalendarDays, Clock } from "lucide-react";
 import Container from "@/components/ui/Container";
 import { Separator } from "@/components/ui/separator";
+import LikeButton from "@/components/BlogLayout/LikeButton";
 import ShareButton from "@/components/BlogLayout/ShareButton";
 
 export interface BlogLayoutProps {
@@ -14,6 +15,7 @@ export interface BlogLayoutProps {
 }
 
 const BlogLayout = ({
+  slug,
   title,
   description,
   date,
@@ -39,7 +41,10 @@ const BlogLayout = ({
             All posts
           </Link>
 
-          <ShareButton />
+          <div className="flex items-center gap-2">
+            <LikeButton slug={slug} />
+            <ShareButton />
+          </div>
         </div>
 
         {/* Header */}
@@ -71,6 +76,13 @@ const BlogLayout = ({
         {/* Blog content — authors write here */}
         <div className="prose prose-invert prose-zinc prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-white prose-a:underline-offset-4 prose-code:rounded prose-code:bg-zinc-800 prose-code:px-1 prose-code:py-0.5 prose-code:text-sm prose-pre:bg-zinc-900 prose-pre:border prose-pre:border-white/10 max-w-none">
           {children}
+        </div>
+
+        <Separator className="mt-10 mb-6 sm:mt-12" />
+
+        <div className="flex items-center justify-between gap-3">
+          <p className="text-muted-foreground text-sm">Enjoyed this post?</p>
+          <LikeButton slug={slug} />
         </div>
       </div>
     </Container>

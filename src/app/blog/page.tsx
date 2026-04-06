@@ -2,7 +2,13 @@ import Container from "@/components/ui/Container";
 import { Separator } from "@/components/ui/separator";
 import { BlogItems } from "@/components/Blogs/constants";
 import Card from "@/components/Blogs/card";
-const page = () => {
+import { getBlogLikeCounts } from "@/lib/blog-likes";
+
+const page = async () => {
+  const likesBySlug = await getBlogLikeCounts(
+    BlogItems.map((item) => item.slug),
+  );
+
   return (
     <Container className="px-4 py-16 sm:px-6 md:px-8">
       <div className="space-y-8">
@@ -24,6 +30,7 @@ const page = () => {
             title={item.title}
             description={item.description}
             date={item.date}
+            likesCount={likesBySlug[item.slug] ?? 0}
           />
         ))}
       </div>

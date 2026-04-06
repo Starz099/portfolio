@@ -2,8 +2,13 @@ import Link from "next/link";
 import Card from "./card";
 import { BlogItems } from "./constants";
 import TextReveal from "../ui/TextReveal";
+import { getBlogLikeCounts } from "@/lib/blog-likes";
 
-const Blogs = () => {
+const Blogs = async () => {
+  const likesBySlug = await getBlogLikeCounts(
+    BlogItems.slice(0, 3).map((blog) => blog.slug),
+  );
+
   return (
     <div className="px-4" data-nosnippet>
       <TextReveal
@@ -14,7 +19,11 @@ const Blogs = () => {
       </TextReveal>
       <div className="flex flex-col gap-6">
         {BlogItems.slice(0, 3).map((blog, index) => (
-          <Card key={index} {...blog} />
+          <Card
+            key={index}
+            {...blog}
+            likesCount={likesBySlug[blog.slug] ?? 0}
+          />
         ))}
       </div>
       <div className="mt-6 flex justify-center">

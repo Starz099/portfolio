@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { ArrowUpRight, CalendarDays } from "lucide-react";
+import { ArrowUpRight, CalendarDays, Heart } from "lucide-react";
 
 export interface BlogCardProps {
   slug: string;
   title: string;
   description: string;
   date: string;
+  likesCount?: number;
 }
 
 const Card = (props: BlogCardProps) => {
@@ -39,9 +40,16 @@ const Card = (props: BlogCardProps) => {
         </div>
 
         <div className="text-muted-foreground border-border mt-3 flex items-center justify-between border-t pt-2.5 text-sm">
-          <div className="flex items-center gap-2">
-            <CalendarDays className="size-4" />
-            <span>{formattedDate}</span>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
+              <CalendarDays className="size-4" />
+              <span>{formattedDate}</span>
+            </div>
+
+            <div className="flex items-center gap-1.5">
+              <Heart className="size-4" />
+              <span>{props.likesCount ?? 0}</span>
+            </div>
           </div>
 
           <div className="text-muted-foreground group-hover:text-foreground inline-flex items-center gap-1.5 font-medium transition-colors sm:hidden">
