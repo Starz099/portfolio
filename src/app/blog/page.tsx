@@ -23,7 +23,7 @@ const page = async () => {
         </div>
         <Separator />
 
-        {BlogItems.map((item, index) => (
+        {BlogItems.reverse().map((item, index) => (
           <Card
             key={index}
             slug={item.slug}
