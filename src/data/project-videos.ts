@@ -8,7 +8,7 @@ import kestro_demo from "../../videos/kestro_demo.mp4.json";
 import whiff_gg_demo from "../../videos/whiff_gg_demo.mp4.json";
 import tura_demo from "../../videos/tura_demo.mp4.json";
 import kyntra_demo from "../../videos/kyntra_demo.mp4.json";
-export const projectVideos: Record<string, unknown> = {
+export const projectVideos: Record<string, any> = {
   leerio: leerio_demo,
   kestro: kestro_demo,
   "dark-pdf": dark_pdf_demo,

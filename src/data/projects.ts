@@ -9,6 +9,7 @@ export interface Project {
   };
   github_link: string;
   demo_link: string;
+  blog_link?: string;
   technologies: string[];
 }
 
@@ -25,6 +26,7 @@ export const projects: Project[] = [
     },
     github_link: "https://github.com/starz099/Leerio",
     demo_link: "https://leerio.vercel.app/",
+    blog_link: "",
     technologies: [
       "Next.js",
       "TypeScript",
@@ -48,6 +50,7 @@ export const projects: Project[] = [
     },
     github_link: "https://github.com/Starz099/Kestro",
     demo_link: "https://kestro.starzz.dev/",
+    blog_link: "",
     technologies: [
       "Next.js",
       "TypeScript",
@@ -60,7 +63,6 @@ export const projects: Project[] = [
       "Clerk",
     ],
   },
-
   {
     id: "hand-and-brain-chess",
     title: "Hand and Brain Chess",
@@ -73,6 +75,7 @@ export const projects: Project[] = [
     },
     github_link: "https://github.com/Starz099/chess",
     demo_link: "https://chess-nu-seven.vercel.app/",
+    blog_link: "",
     technologies: [
       "React",
       "TypeScript",
@@ -80,19 +83,6 @@ export const projects: Project[] = [
       "Socket.io",
       "Node.js",
     ],
-  },
-  {
-    id: "dark-pdf",
-    title: "Dark-pdf",
-    description: "Convert any pdf to dark mode with a single click.",
-    thumbnail: {
-      src: "/images/projects/dark-pdf.png",
-      alt: "Dark-pdf project thumbnail",
-      aspectRatio: "16 / 9",
-    },
-    github_link: "https://github.com/Starz099/dark-pdf",
-    demo_link: "https://dark-pdf.starzz.dev/",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "PDF.js"],
   },
   {
     id: "tura",
@@ -106,6 +96,7 @@ export const projects: Project[] = [
     },
     github_link: "https://github.com/Starz099/tura",
     demo_link: "",
+    blog_link: "/blog/making-tura",
     technologies: [
       "rust",
       "clap",
@@ -115,6 +106,20 @@ export const projects: Project[] = [
       "blake3",
       "chacha20poly1305",
     ],
+  },
+  {
+    id: "dark-pdf",
+    title: "Dark-pdf",
+    description: "Convert any pdf to dark mode with a single click.",
+    thumbnail: {
+      src: "/images/projects/dark-pdf.png",
+      alt: "Dark-pdf project thumbnail",
+      aspectRatio: "16 / 9",
+    },
+    github_link: "https://github.com/Starz099/dark-pdf",
+    demo_link: "https://dark-pdf.starzz.dev/",
+    blog_link: "",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "PDF.js"],
   },
   {
     id: "kyntra",
@@ -128,6 +133,7 @@ export const projects: Project[] = [
     },
     github_link: "https://github.com/Starz099/kyntra",
     demo_link: "https://kyntra.starzz.dev",
+    blog_link: "",
     technologies: [
       "Node.js",
       "TypeScript",
@@ -149,6 +155,7 @@ export const projects: Project[] = [
     },
     github_link: "https://github.com/Starz099/whiff.gg",
     demo_link: "",
+    blog_link: "",
     technologies: [
       "Next.js",
       "TypeScript",
@@ -169,6 +176,7 @@ export const projects: Project[] = [
     },
     github_link: "https://github.com/Starz099/writso",
     demo_link: "https://writso.vercel.app",
+    blog_link: "",
     technologies: [
       "Next.js",
       "TypeScript",
@@ -189,6 +197,7 @@ export const projects: Project[] = [
     },
     github_link: "https://github.com/starz099/token-launchpad",
     demo_link: "https://token-launchpad-rho.vercel.app/",
+    blog_link: "",
     technologies: ["React", "JavaScript", "Solana_web3.js", "Tailwind CSS"],
   },
 ];
