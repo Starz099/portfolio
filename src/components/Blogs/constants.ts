@@ -15,4 +15,11 @@ export const BlogItems: BlogCardProps[] = [
       "Tura is a peer-to-peer file transfer CLI built with Rust. In this blog post, I will share my journey of creating Tura, the challenges I faced, and the lessons I learned along the way.",
     date: "2026-04-04",
   },
+  {
+    slug: "rag-0-to-1",
+    title: "Understanding RAG: From First Principles",
+    description:
+      "Learn how Retrieval-Augmented Generation solves the LLM context problem. Explore chunking, embeddings, vector databases, and semantic search from first principles.",
+    date: "2026-04-25",
+  },
 ];

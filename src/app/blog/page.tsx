@@ -23,16 +23,18 @@ const page = async () => {
         </div>
         <Separator />
 
-        {BlogItems.reverse().map((item, index) => (
-          <Card
-            key={index}
-            slug={item.slug}
-            title={item.title}
-            description={item.description}
-            date={item.date}
-            likesCount={likesBySlug[item.slug] ?? 0}
-          />
-        ))}
+        {BlogItems.slice()
+          .reverse()
+          .map((item, index) => (
+            <Card
+              key={index}
+              slug={item.slug}
+              title={item.title}
+              description={item.description}
+              date={item.date}
+              likesCount={likesBySlug[item.slug] ?? 0}
+            />
+          ))}
       </div>
     </Container>
   );

@@ -1,37 +1,5 @@
-import Image from "next/image";
-
-const HighlightPath = ({ path }: { path: string }) => {
-  return (
-    <strong className="text-foreground inline max-w-full align-baseline leading-none font-medium">
-      <span className="bg-muted text-foreground inline-block max-w-full rounded px-1.5 py-0 align-baseline text-xs leading-6 break-all sm:text-sm">
-        {path}
-      </span>
-    </strong>
-  );
-};
-
-type DiagramBlockProps = {
-  src: string;
-  alt: string;
-  caption: string;
-};
-
-const DiagramBlock = ({ src, alt, caption }: DiagramBlockProps) => {
-  return (
-    <figure className="border-border bg-muted/40 space-y-3 overflow-hidden rounded-2xl border p-3 sm:p-4">
-      <Image
-        src={src}
-        alt={alt}
-        width={1600}
-        height={900}
-        className="border-border bg-background h-auto w-full rounded-xl border object-cover"
-      />
-      <figcaption className="text-muted-foreground text-sm leading-6 sm:text-base">
-        {caption}
-      </figcaption>
-    </figure>
-  );
-};
+import { HighlightPath } from "../common/HighlightPath";
+import { DiagramBlock } from "../common/DiagramBlock";
 
 const MakingTura = () => {
   return (
@@ -86,7 +54,7 @@ const MakingTura = () => {
           punching.
         </p>
         <DiagramBlock
-          src="/images/blog/1.png"
+          src="/images/blog/making-tura/1.png"
           alt="STUN and MQTT signaling with UDP hole punching"
           caption="STUN + MQTT + UDP hole punching flow"
         />
@@ -136,7 +104,7 @@ const MakingTura = () => {
           It just forwards data from sender to receiver.
         </p>
         <DiagramBlock
-          src="/images/blog/2.png"
+          src="/images/blog/making-tura/2.png"
           alt="TCP relay architecture where two clients connect through a relay"
           caption="TCP relay architecture (Client -> Relay -> Client)"
         />
@@ -175,7 +143,7 @@ const MakingTura = () => {
           <li>write them to disk</li>
         </ul>
         <DiagramBlock
-          src="/images/blog/3.png"
+          src="/images/blog/making-tura/3.png"
           alt="Sequential read send wait chunk flow"
           caption="Sequential chunk flow (Read -> Send -> Wait)"
         />
@@ -212,7 +180,7 @@ const MakingTura = () => {
           sending, everything.
         </p>
         <DiagramBlock
-          src="/images/blog/4.png"
+          src="/images/blog/making-tura/4.png"
           alt="Parallel chunk transfer with multiple worker threads"
           caption="Parallel chunk transfer with multiple threads"
         />
@@ -261,7 +229,7 @@ const MakingTura = () => {
           <li>data gets encrypted using a shared key</li>
         </ul>
         <DiagramBlock
-          src="/images/blog/5.png"
+          src="/images/blog/making-tura/5.png"
           alt="End-to-end encryption flow through a relay"
           caption="Encryption flow (Encrypt -> Relay -> Decrypt)"
         />
