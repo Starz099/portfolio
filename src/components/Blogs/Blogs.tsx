@@ -5,8 +5,10 @@ import TextReveal from "../ui/TextReveal";
 import { getBlogLikeCounts } from "@/lib/blog-likes";
 
 const Blogs = async () => {
+  const sortedBlogs = BlogItems.slice().reverse();
+
   const likesBySlug = await getBlogLikeCounts(
-    BlogItems.slice(0, 3).map((blog) => blog.slug),
+    sortedBlogs.slice(0, 3).map((blog) => blog.slug),
   );
 
   return (
@@ -18,7 +20,7 @@ const Blogs = async () => {
         Blog
       </TextReveal>
       <div className="flex flex-col gap-6">
-        {BlogItems.slice(0, 3).map((blog, index) => (
+        {sortedBlogs.slice(0, 3).map((blog, index) => (
           <Card
             key={index}
             {...blog}

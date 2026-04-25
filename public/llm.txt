@@ -1,0 +1,33 @@
+# Mayank's Portfolio
+
+> Software engineer open to work. I build and ship reliable web apps end-to-end from concept to production. Building fast, failing fast, learning faster.
+
+## Contact & Socials
+- Website: https://starzz.dev
+- GitHub: https://github.com/Starz099
+- LinkedIn: https://www.linkedin.com/in/mayank-23643b328/
+- X (Twitter): https://x.com/mayank0166
+- LeetCode: https://leetcode.com/Starz099
+- Discord: https://discord.com/users/1226021151688626206
+- Email: mayankbh064@gmail.com
+
+## Projects
+- **Leerio**: AI-powered platform enabling conversational querying and summarisation of multi-page PDF documents using a Retrieval-Augmented Generation (RAG) pipeline. (https://leerio.vercel.app/)
+- **Kestro**: Platform to practice typing speed for code, not just text. Powered by Monaco Editor. (https://kestro.starzz.dev/)
+- **Hand and Brain Chess**: Online platform for playing Hand and Brain Chess variant with real-time gameplay. (https://chess-nu-seven.vercel.app/)
+- **Tura**: Blazing-fast, file transfer CLI written in Rust with E2E encryption. (https://github.com/Starz099/tura)
+- **Dark-pdf**: Convert any pdf to dark mode with a single click. (https://dark-pdf.starzz.dev/)
+- **Kyntra**: AI-powered CLI for smarter commits and better branch naming. (https://kyntra.starzz.dev)
+- **Whiff.gg**: Valorant stats scraping and AI-generated performance roasts.
+- **Writso**: Writing practice web app with AI reviews and progress tracking. (https://writso.vercel.app)
+- **Token-Launchpad**: Decentralized platform to create custom Solana tokens. (https://token-launchpad-rho.vercel.app/)
+
+## Blogs
+- **URL as a Skill**: Exploring the importance of URLs in modern web development. (https://starzz.dev/blog/url-as-a-skill)
+- **Making Tura**: Technical deep dive into building a fast file transfer CLI in Rust. (https://starzz.dev/blog/making-tura)
+- **RAG from 0 to 1**: A comprehensive guide to building Retrieval-Augmented Generation systems. (https://starzz.dev/blog/rag-0-to-1)
+
+## Tech Stack
+- **Frontend**: Next.js, React, TypeScript, Tailwind CSS, Framer Motion, GSAP, Three.js
+- **Backend**: Node.js, Express, MongoDB, PostgreSQL, Prisma, LangChain
+- **Other**: Rust, Solana, Python, Puppeteer

@@ -16,5 +16,5 @@ import RAG0To1 from "./rag-0-to-1";
 export const blogRegistry: Record<string, ComponentType> = {
   "url-as-a-skill": UrlAsASkill,
   "making-tura": MakingTura,
-  "rag-0-to-1": RAG0To1
+  "rag-0-to-1": RAG0To1,
 };
