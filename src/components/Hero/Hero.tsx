@@ -20,7 +20,10 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        <div className="border-background bg-background ring-border/60 dark:ring-border/80 absolute -bottom-12 left-8 h-24 w-24 overflow-hidden rounded-full border-4 shadow-md ring-1 shadow-black/20 md:h-28 md:w-28 dark:shadow-[0_10px_30px_hsl(var(--foreground)/0.28)]">
+        <div
+          className="border-background bg-background ring-border/60 dark:ring-border/80 absolute -bottom-12 left-8 h-24 w-24 overflow-hidden border-4 shadow-md ring-1 shadow-black/20 md:h-28 md:w-28 dark:shadow-[0_10px_30px_hsl(var(--foreground)/0.28)]"
+          style={{ borderRadius: "9999px" }}
+        >
           <Image
             alt="profile avatar"
             src="/images/profile.png"

@@ -40,7 +40,7 @@ export function ProjectDialog({
         className="max-h-[90vh] max-w-4xl overflow-y-auto p-0 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         data-lenis-prevent
       >
-        <div className="p-6">
+        <div className="p-4 sm:p-5">
           <DialogHeader className="pr-8">
             <DialogTitle className="text-left text-2xl font-bold sm:text-3xl">
               {project.title}

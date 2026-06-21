@@ -30,22 +30,24 @@ const ProjectsCard = (props: ProjectsProps) => {
         onClick={() => setIsOpen(true)}
       >
         {/* Thumbnail Section */}
-        <div
-          className="relative w-full overflow-hidden"
-          style={{ aspectRatio: props.thumbnail.aspectRatio }}
-        >
-          <div className="from-muted/60 via-muted/30 to-muted/10 group-hover:from-muted/70 group-hover:via-muted/40 absolute inset-0 bg-linear-to-br transition-colors duration-300" />
-          <Image
-            src={props.thumbnail.src}
-            alt={props.thumbnail.alt}
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
-          />
+        <div className="px-4 pt-4">
+          <div
+            className="relative w-full overflow-hidden"
+            style={{ aspectRatio: props.thumbnail.aspectRatio }}
+          >
+            <div className="from-muted/60 via-muted/30 to-muted/10 group-hover:from-muted/70 group-hover:via-muted/40 absolute inset-0 bg-linear-to-br transition-colors duration-300" />
+            <Image
+              src={props.thumbnail.src}
+              alt={props.thumbnail.alt}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
         </div>
 
         {/* Info Section - Always visible */}
-        <div className="grow space-y-4 p-6">
+        <div className="grow space-y-4 p-4">
           {/* Title - Always visible */}
           <h2 className="text-foreground text-xl font-semibold tracking-tight">
             {props.title}
@@ -81,7 +83,7 @@ const ProjectsCard = (props: ProjectsProps) => {
         </div>
 
         {/* Links - Fixed at bottom */}
-        <div className="relative z-20 mt-auto flex flex-wrap gap-3 p-6 pt-0">
+        <div className="relative z-20 mt-auto flex flex-wrap gap-3 p-4 pt-0">
           {props.github_link && (
             <Link
               href={props.github_link}

@@ -3,7 +3,10 @@ import Link from "next/link";
 
 const Avatar = () => {
   return (
-    <div className="border-accent h-12 w-12 cursor-pointer overflow-hidden rounded-2xl border-2 shadow-md transition-transform duration-200 hover:scale-90">
+    <div
+      className="border-accent h-12 w-12 cursor-pointer overflow-hidden border-2 shadow-md transition-transform duration-200 hover:scale-90"
+      style={{ borderRadius: "9999px" }}
+    >
       <Link href="/">
         <Image
           alt="profile avatar"

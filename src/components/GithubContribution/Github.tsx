@@ -4,12 +4,11 @@ import { githubConfig } from "./Config";
 import { useTheme } from "next-themes";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, cloneElement } from "react";
 
 import GithubIcon from "../svgs/Github";
 import { Button } from "../ui/button";
 import Container from "../ui/Container";
-
 const ActivityCalendar = dynamic(
   () => import("react-activity-calendar").then((mod) => mod.default),
   { ssr: false },
@@ -38,6 +37,13 @@ export default function Github() {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const { resolvedTheme } = useTheme();
+
+  const [hoveredActivity, setHoveredActivity] = useState<{
+    left: number;
+    top: number;
+    count: number;
+    date: string;
+  } | null>(null);
 
   // Build exact 365-day rolling data (important for correct month order)
   function buildFullYearData(validContribs: ContributionItem[]) {
@@ -178,8 +184,8 @@ export default function Github() {
           </div>
         ) : (
           /* Calendar UI Block */
-          <div className="rounded-xl border border-white/10 bg-black/20 p-6 shadow-lg backdrop-blur-xl">
-            <div className="w-full overflow-hidden">
+          <div className="relative rounded-xl border border-white/10 bg-black/20 p-5 shadow-lg backdrop-blur-xl">
+            <div className="w-full overflow-x-auto">
               <ActivityCalendar
                 data={contributions}
                 blockSize={11}
@@ -199,8 +205,65 @@ export default function Github() {
                 style={{
                   color: "rgb(150,150,150)",
                 }}
+                renderBlock={(block, activity) => {
+                  return cloneElement(block, {
+                    onMouseEnter: (e: React.MouseEvent<SVGRectElement>) => {
+                      const rect = e.currentTarget.getBoundingClientRect();
+                      const container =
+                        e.currentTarget.closest(".backdrop-blur-xl");
+                      if (container) {
+                        const containerRect = container.getBoundingClientRect();
+                        setHoveredActivity({
+                          left: rect.left - containerRect.left + rect.width / 2,
+                          top: rect.top - containerRect.top - 8,
+                          count: activity.count,
+                          date: activity.date,
+                        });
+                      }
+                    },
+                    onMouseLeave: () => {
+                      setHoveredActivity(null);
+                    },
+                    style: {
+                      cursor: "pointer",
+                    },
+                  });
+                }}
               />
             </div>
+            {hoveredActivity &&
+              (() => {
+                const [y, m, d] = hoveredActivity.date.split("-").map(Number);
+                const date = new Date(y, m - 1, d);
+                const formattedDate = date.toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "numeric",
+                  year: "numeric",
+                });
+                return (
+                  <div
+                    className="bg-popover text-popover-foreground border-border pointer-events-none absolute z-50 -translate-x-1/2 -translate-y-full rounded-md border px-3 py-1.5 text-xs shadow-md transition-all duration-75 ease-out"
+                    style={{
+                      left: `${hoveredActivity.left}px`,
+                      top: `${hoveredActivity.top}px`,
+                    }}
+                  >
+                    <div className="relative z-10 font-medium">
+                      <span className="font-semibold">
+                        {hoveredActivity.count === 0
+                          ? "No"
+                          : hoveredActivity.count}{" "}
+                        contributions
+                      </span>
+                      <span className="text-muted-foreground ml-1.5">
+                        on {formattedDate}
+                      </span>
+                    </div>
+                    {/* Arrow */}
+                    <div className="border-border bg-popover absolute bottom-[-5px] left-1/2 size-2.5 -translate-x-1/2 rotate-45 border-r border-b" />
+                  </div>
+                );
+              })()}
           </div>
         )}
       </div>

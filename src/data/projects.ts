@@ -18,7 +18,7 @@ export const projects: Project[] = [
     id: "oto",
     title: "Oto",
     description:
-    "A lightweight, keyboard-first desktop audio mixer overlay for windows written in Rust, featuring app-specific volume control and zero-latency global push-to-talk, currently supporting Discord.",
+      "A lightweight, keyboard-first desktop audio mixer overlay for windows written in Rust, featuring app-specific volume control and zero-latency global push-to-talk, currently supporting Discord.",
     thumbnail: {
       src: "/images/projects/oto.png",
       alt: "Oto project thumbnail",

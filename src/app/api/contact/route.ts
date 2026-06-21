@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #333;">New Contact Form Submission</h2>
-          <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <div style="background-color: #f5f5f5; padding: 20px; border-radius: 0px; margin: 20px 0;">
             <p style="margin: 10px 0;"><strong>From:</strong> ${validatedData.name}</p>
             <p style="margin: 10px 0;"><strong>Email:</strong> ${validatedData.email}</p>
             <p style="margin: 10px 0;"><strong>Subject:</strong> ${validatedData.subject}</p>

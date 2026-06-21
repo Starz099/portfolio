@@ -20,7 +20,7 @@ const Card = (props: BlogCardProps) => {
     <Link
       href={`/blog/${props.slug}`}
       aria-label={`Read blog: ${props.title}`}
-      className="group bg-background/80 hover:border-foreground/20 border-border hover:bg-background block overflow-hidden rounded-xl border px-5 py-3.5 transition-all duration-300"
+      className="group bg-background/80 hover:border-foreground/20 border-border hover:bg-background block overflow-hidden rounded-xl border px-4 py-3 transition-all duration-300"
     >
       <article>
         <div className="flex items-center justify-between gap-6">
