@@ -15,6 +15,21 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "rush",
+    title: "Rush",
+    description:
+      "The local-first video editor with an integrated AI agent. Transcribe media, search visual frames, and control your timeline directly from chat prompts.",
+    thumbnail: {
+      src: "/images/projects/rush.png",
+      alt: "Rush project thumbnail",
+      aspectRatio: "16 / 9",
+    },
+    github_link: "https://github.com/Starz099/rush",
+    demo_link: "https://rush.starzz.dev/",
+    blog_link: "",
+    technologies: ["Rust", "TypeScript", "Tauri", "FFmpeg", "React", "SQLite"],
+  },
+  {
     id: "oto",
     title: "Oto",
     description:
