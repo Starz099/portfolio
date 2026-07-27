@@ -8,8 +8,6 @@ import ReactLenis from "lenis/react";
 import Navbar from "@/components/Navbar/navbar";
 import Footer from "@/components/Footer/Footer";
 import PageTransition from "@/components/ui/PageTransition";
-import BoomBotOverlayGate from "@/components/BoomBot/BoomBotOverlayGate";
-import { BoomBotProvider } from "@/components/BoomBot/boombot-provider";
 
 const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"],
@@ -62,26 +60,16 @@ export default function RootLayout({
         >
           <Analytics />
           <SpeedInsights />
-          <BoomBotProvider>
-            <ReactLenis root className="">
-              <BoomBotOverlayGate
-                lightingPreset="studio"
-                modelPath="/boombot.glb"
-                depth={80}
-                speed={20}
-                showFloor={false}
-              />
-              <div className="background-gradient"></div>
-              <Navbar />
-              <PageTransition variant="blur-fade">{children}</PageTransition>
-              <Footer />
-
-              <div
-                aria-hidden="true"
-                className="bg-background/30 pointer-events-none fixed inset-x-0 bottom-0 h-20 mask-[linear-gradient(to_top,black,transparent)] backdrop-blur-md"
-              ></div>
-            </ReactLenis>
-          </BoomBotProvider>
+          <ReactLenis root className="">
+            <div className="background-gradient"></div>
+            <Navbar />
+            <PageTransition variant="blur-fade">{children}</PageTransition>
+            <Footer />
+            <div
+              aria-hidden="true"
+              className="bg-background/30 pointer-events-none fixed inset-x-0 bottom-0 h-20 mask-[linear-gradient(to_top,black,transparent)] backdrop-blur-md"
+            ></div>
+          </ReactLenis>
         </ThemeProvider>
       </body>
     </html>

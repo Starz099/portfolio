@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import Container from "../ui/Container";
 import { ThemeToggleButton } from "../ThemeSwitch";
-import { BoomBotToggleButton } from "../BoomBot/BoomBotToggle";
 import Links from "./links";
 import { linkItems } from "./constants";
 
@@ -22,7 +21,6 @@ const Navbar = () => {
           <Links className="hidden translate-y-1 sm:flex" />
         </div>
         <div className="flex items-center gap-2 sm:gap-4">
-          <BoomBotToggleButton />
           <ThemeToggleButton
             className="border-border/60 hover:border-border rounded-2xl border-2 transition-all duration-200 hover:scale-95 hover:shadow-sm"
             variant="rectangle"

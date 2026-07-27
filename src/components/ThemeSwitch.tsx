@@ -173,11 +173,7 @@ export const ThemeToggleButton = ({
 // ///////////////////////////////////////////////////////////////////////////
 
 export type AnimationVariant =
-  | "circle"
-  | "rectangle"
-  | "gif"
-  | "polygon"
-  | "circle-blur";
+  "circle" | "rectangle" | "gif" | "polygon" | "circle-blur";
 export type AnimationStart =
   | "top-left"
   | "top-right"

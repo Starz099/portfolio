@@ -9,11 +9,7 @@ import * as THREE from "three";
 // ==================== TYPES ====================
 
 export type LightingPreset =
-  | "default"
-  | "studio"
-  | "sunset"
-  | "neon"
-  | "spotlight";
+  "default" | "studio" | "sunset" | "neon" | "spotlight";
 
 interface BoomBot3DProps {
   /** Path to GLB/GLTF model file */
