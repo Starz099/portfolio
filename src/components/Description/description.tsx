@@ -1,6 +1,7 @@
 import CodedTodayBadge from "./code-time";
 import ContactCTA from "./contact-cta";
 import ResumeButton from "./resume-button";
+import Socials from "../Socials/Socials";
 
 const Description = () => {
   return (
@@ -14,9 +15,12 @@ const Description = () => {
         <u className="underline underline-offset-2">Failing</u> fast,{" "}
         <u className="underline underline-offset-2">Learning</u> faster.
       </p>
-      <div className="flex gap-3">
-        <ResumeButton />
-        <ContactCTA />
+      <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+        <div className="flex items-center gap-3">
+          <ResumeButton />
+          <ContactCTA />
+        </div>
+        <Socials />
       </div>
     </div>
   );

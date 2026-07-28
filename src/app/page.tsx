@@ -3,7 +3,6 @@ import Hero from "@/components/Hero/Hero";
 import Projects from "@/components/Projects/Projects";
 import Blogs from "@/components/Blogs/Blogs";
 import Skills from "@/components/Skills/Skills";
-import Socials from "@/components/Socials/Socials";
 import Container from "@/components/ui/Container";
 import Github from "@/components/GithubContribution/Github";
 import AnimatedSection from "@/components/ui/AnimatedSection";
@@ -53,9 +52,6 @@ export default function Home() {
         </AnimatedSection>
         <AnimatedSection delay={100}>
           <Description />
-        </AnimatedSection>
-        <AnimatedSection delay={200}>
-          <Socials />
         </AnimatedSection>
         {/* <AnimatedSection delay={150}>
           <SpotifyNowPlaying />

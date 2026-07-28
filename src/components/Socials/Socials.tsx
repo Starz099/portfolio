@@ -1,15 +1,19 @@
 import Link from "next/link";
 import Github from "../svgs/Github";
+import Codeforces from "../svgs/Codeforces";
 import X from "../svgs/X";
 import LinkedIn from "../svgs/LinkedIn";
 import Email from "../svgs/Email";
 import Magnetic from "../ui/Magnetic";
-import LeetCode from "../svgs/Leetcode";
 import Discord from "../svgs/Discord";
 
-const Socials = () => {
+interface SocialsProps {
+  className?: string;
+}
+
+const Socials = ({ className = "" }: SocialsProps) => {
   return (
-    <div className="flex gap-2 px-4">
+    <div className={`flex items-center gap-2 ${className}`}>
       <Magnetic>
         <Link
           href="https://github.com/Starz099"
@@ -22,22 +26,12 @@ const Socials = () => {
       </Magnetic>
       <Magnetic>
         <Link
-          href="https://leetcode.com/Starz099"
+          href="https://codeforces.com/profile/Starz099"
           target="_blank"
           rel="noopener noreferrer"
           className="text-muted-foreground hover:text-foreground transform transition-colors duration-200 hover:scale-110"
         >
-          <LeetCode className="" />
-        </Link>
-      </Magnetic>
-      <Magnetic>
-        <Link
-          href="https://discord.com/users/1226021151688626206"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-foreground transform transition-colors duration-200 hover:scale-110"
-        >
-          <Discord className="" />
+          <Codeforces className="" />
         </Link>
       </Magnetic>
       <Magnetic>
@@ -52,12 +46,22 @@ const Socials = () => {
       </Magnetic>
       <Magnetic>
         <Link
-          href="https://www.linkedin.com/in/mayank-23643b328/"
+          href="https://www.linkedin.com/in/mayank016/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-muted-foreground hover:text-foreground transform transition-colors duration-200 hover:scale-110"
         >
           <LinkedIn className="" />
+        </Link>
+      </Magnetic>
+      <Magnetic>
+        <Link
+          href="https://discord.com/users/1226021151688626206"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-muted-foreground hover:text-foreground transform transition-colors duration-200 hover:scale-110"
+        >
+          <Discord className="" />
         </Link>
       </Magnetic>
       <Magnetic>
