@@ -7,7 +7,7 @@
 
 export const githubConfig = {
   username: "Starz099",
-  apiUrl: "https://github-contributions-api.deno.dev",
+  apiUrl: "https://github-contributions-api.jogruber.de/v4/Starz099?y=last",
 
   // Display settings
   title: "GitHub Activity",

@@ -22,13 +22,8 @@ type ContributionItem = {
 
 type GitHubContributionResponse = {
   date: string;
-  contributionCount: number;
-  contributionLevel:
-    | "NONE"
-    | "FIRST_QUARTILE"
-    | "SECOND_QUARTILE"
-    | "THIRD_QUARTILE"
-    | "FOURTH_QUARTILE";
+  count: number;
+  level: 0 | 1 | 2 | 3 | 4;
 };
 
 export default function Github() {
@@ -74,45 +69,28 @@ export default function Github() {
     async function fetchData() {
       try {
         setIsLoading(true);
-        const response = await fetch(
-          `${githubConfig.apiUrl}/${githubConfig.username}.json`,
-        );
-        const data: { contributions?: unknown[] } = await response.json();
+        const response = await fetch(`${githubConfig.apiUrl}`);
+        const data: { contributions?: GitHubContributionResponse[] } =
+          await response.json();
 
         if (!data?.contributions || !Array.isArray(data.contributions)) {
           return setHasError(true);
         }
 
-        const flat = data.contributions.flat();
-
-        const contributionLevelMap = {
-          NONE: 0,
-          FIRST_QUARTILE: 1,
-          SECOND_QUARTILE: 2,
-          THIRD_QUARTILE: 3,
-          FOURTH_QUARTILE: 4,
-        };
-
-        const valid = flat
-          .filter(
-            (item: any): item is GitHubContributionResponse =>
-              item &&
-              typeof item === "object" &&
-              "date" in item &&
-              "contributionCount" in item,
-          )
-          .map((item: GitHubContributionResponse) => ({
-            date: item.date,
-            count: item.contributionCount || 0,
-            level: contributionLevelMap[item.contributionLevel] || 0,
-          }));
+        const valid = data.contributions.filter(
+          (item) =>
+            item &&
+            typeof item === "object" &&
+            "date" in item &&
+            "count" in item &&
+            "level" in item,
+        );
 
         if (valid.length === 0) return setHasError(true);
 
         const total = valid.reduce((sum, c) => sum + c.count, 0);
         setTotalContributions(total);
 
-        //@ts-expect-error validation done above
         const fullYear = buildFullYearData(valid);
         setContributions(fullYear);
       } catch (err) {
