@@ -40,7 +40,7 @@ export const projects: Project[] = [
       aspectRatio: "16 / 9",
     },
     github_link: "https://github.com/Starz099/oto",
-    demo_link: "",
+    demo_link: "https://oto.starzz.dev/",
     blog_link: "",
     technologies: ["Rust", "Egui", "Windows WASAPI", "Discord API"],
   },
